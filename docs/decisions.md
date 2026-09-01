@@ -25,3 +25,6 @@ v0.3 built in a new, separate GitHub repository, recolle-v03, rather than as tag
 
 ## 2026-08-23
 Database choice, Postgres with PostGIS or continue with Firebase, deliberately deferred to Etapa 4, decided against a real list of required queries once data exists, not before.
+
+## 2026-08-23
+Frontend stack choice deferred to the map stage (Etapa 3), decided with a written justification once there is real data to render, not before. Already stated in CLAUDE.md, missing here until now.
