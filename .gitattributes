@@ -1,0 +1,15 @@
+* text=auto eol=lf
+*.md text
+*.js text
+*.jsx text
+*.json text
+*.css text
+*.html text
+.gitignore text
+.gitattributes text
+.gitkeep text
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.pptx binary
