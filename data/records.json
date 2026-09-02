@@ -59,8 +59,8 @@
   },
   {
     "id": "020",
-    "categoria": "circular_item",
-    "severidad": null,
+    "categoria": "illegal_dumping",
+    "severidad": 2,
     "localizacion": "Zalaeta con Socorro",
     "fecha": "2026-09-01",
     "fuente": {
@@ -114,8 +114,8 @@
   },
   {
     "id": "023",
-    "categoria": "circular_item",
-    "severidad": null,
+    "categoria": "bulk_waste",
+    "severidad": 1,
     "localizacion": "A unos metros del Mercadona de Ronda de Outeiro",
     "fecha": "2026-09-01",
     "fuente": {

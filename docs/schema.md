@@ -27,3 +27,16 @@ Draft schema for the manual capture stage (Etapa 2). Not final, meant to be test
 ## Note after the first batch, 2026-09-02
 
 This batch, records 017 to 031, came from an Apify scrape of the source group rather than manual copy. Two consequences for the schema. First, the structured output supplied `fecha` and `fuente.url` reliably for the first time, both were weak points when capturing by hand. Second, it introduced an OCR caption per image, `ocrText`, a data point the formal schema does not have. It carried real signal here, naming the discarded object where the post text gave only an address, and it is worth considering as a field in a future version.
+
+## Confirmed zona values, as of 2026-09-02
+
+No canonical list existed before this entry. The neighborhood names in the `localizacion` row above are illustrations of the right granularity, not confirmations. These are the values confirmed as real A Coruna neighborhoods and accepted as canonical for `zona`:
+
+- Os Mallos
+- Monte Alto
+- Novo Mesoiro
+- Riazor, confirmed 2026-09-02, appears in record 019
+- Zalaeta, confirmed 2026-09-02, appears in records 020 and 029
+- Peruleiro, confirmed 2026-09-02, appears in record 031
+
+A name appearing in post text is not enough to add it here, it gets confirmed first. One trap already seen: record 017 reads "C/Puentedeume", a street in A Coruna, not the concello Pontedeume. Its `zona` is deliberately null.
