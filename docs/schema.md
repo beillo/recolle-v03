@@ -24,19 +24,40 @@ Draft schema for the manual capture stage (Etapa 2). Not final, meant to be test
 - Does `confidence` mean anything when a human is the one judging, or is it redundant at this stage
 - Does `zona` add anything `localizacion` doesn't already cover
 
-## Note after the first batch, 2026-09-02
+## Schema v2
 
-This batch, records 017 to 031, came from an Apify scrape of the source group rather than manual copy. Two consequences for the schema. First, the structured output supplied `fecha` and `fuente.url` reliably for the first time, both were weak points when capturing by hand. Second, it introduced an OCR caption per image, `ocrText`, a data point the formal schema does not have. It carried real signal here, naming the discarded object where the post text gave only an address, and it is worth considering as a field in a future version.
+Everything above is v1, kept as historical record and not edited. v2 is the schema as the data actually is, checked against `data/records.json` on 2026-09-02: 15 records, ids 017 to 031, 23 image files. It supersedes v1 and the dated notes that preceded this section, whose content is folded in here.
 
-## Confirmed zona values, as of 2026-09-02
+### Fields
 
-No canonical list existed before this entry. The neighborhood names in the `localizacion` row above are illustrations of the right granularity, not confirmations. These are the values confirmed as real A Coruna neighborhoods and accepted as canonical for `zona`:
+| Field | Type | Notes |
+|---|---|---|
+| id | string | Three digit zero padded sequence. The file currently starts at 017: ids 001 to 016 were set aside for a manual capture batch that was never run, so no record below 017 exists |
+| categoria | enum | Six values, unchanged from v1: `container_issue`, `illegal_dumping`, `bulk_waste`, `urban_damage`, `circular_item`, `other`. Three are in use so far, `circular_item` on 13 records, `illegal_dumping` on 1, `bulk_waste` on 1. v1 claims these were confirmed against the v0.2 code, that claim has not been verified from this repository, the v0.2 code lives in `beillo/Recolle` |
+| severidad | integer or null | `null` when categoria is `circular_item`, an item offered for reuse has no severity. A real 1 to 3 human judgment for every other categoria. Only two records carry a value, 020 at 2 and 023 at 1, both assigned by human review, not by default |
+| localizacion | string | The location as the post states it, which in practice is street and number or a landmark, not the neighborhood v1 assumed. Neighborhood now lives in `zona`. This resolves the v1 open question about the two fields overlapping: they do not, they sit at different granularity |
+| fecha | date | `YYYY-MM-DD`, the date part of the post timestamp. Reliable when the source is structured, the Apify export carries a real timestamp per post. Unreliable from manual copy and paste, where it was one of the fields most often lost or guessed |
+| fuente | object | Three keys now, `{ tipo, url, grupo }`. v1 had two. `tipo` is the source type, e.g. `facebook_group`, `url` points to the original post, `grupo` names the source group |
+| descripcion | string | The post's original text, verbatim, newlines included. Categoria, localizacion, severidad and zona are not parsed out of it automatically, they are human judgment at capture time, because posts follow no consistent pattern |
+| imagen | array of strings | An array, not the single string v1 specified: posts routinely carry several photos. Repo relative paths under `data/images/`, downloaded and stored locally at capture time, no external hosting. One image is `{id}.jpg`, several are `{id}-1.jpg`, `{id}-2.jpg` and so on |
+| confidence | float | 0 to 1, how confident the capturer is in the categoria and localizacion assigned. Text based only: it reflects the post text and, where the source supplies it, the OCR caption. The image itself is not examined, image based confidence stays out of scope at this stage. Two values in use, 0.9 on 10 records and 0.6 on 5 |
+| zona | string or null | Populated at capture time, not reserved as v1 said. Holds a confirmed neighborhood from the list below, or `null` when the post names no confirmed one. Five records carry a value |
+
+### Confirmed zona values
+
+A name appearing in post text is not enough, it gets confirmed before it is used:
 
 - Os Mallos
 - Monte Alto
 - Novo Mesoiro
-- Riazor, confirmed 2026-09-02, appears in record 019
-- Zalaeta, confirmed 2026-09-02, appears in records 020 and 029
-- Peruleiro, confirmed 2026-09-02, appears in record 031
+- Riazor, confirmed 2026-09-02, record 019
+- Zalaeta, confirmed 2026-09-02, records 020 and 029
+- Peruleiro, confirmed 2026-09-02, record 031
 
-A name appearing in post text is not enough to add it here, it gets confirmed first. One trap already seen: record 017 reads "C/Puentedeume", a street in A Coruna, not the concello Pontedeume. Its `zona` is deliberately null.
+The neighborhood names in the v1 `localizacion` row above are illustrations of granularity, not confirmations, and three of them, Agra do Orzan, Cidade Vella and Os Castros, appear in no record.
+
+One collision to guard against, already seen: record 017 reads "C/Puentedeume", a street in A Coruna, not the concello Pontedeume. A plain name match against a list holding both bairros and concellos would file it in the wrong place. Its `zona` is deliberately `null`.
+
+### Not yet a field: ocrText
+
+Apify captures carry an OCR caption per image, one line describing what the photo appears to show. It is not part of the schema and does not appear in `data/records.json`. It earned its keep in this batch, naming the discarded object on records whose post text gave only a street address, and it fed the `confidence` value on those. Worth considering as a formal field in a future version.
