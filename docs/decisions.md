@@ -37,3 +37,6 @@ Human review of the 6 records the automated batch flagged as ambiguous or defaul
 
 ## 2026-09-02
 Frontend stack for the minimal map (Etapa 3) chosen: React with Vite and Leaflet, same combination as v0.2. Reasoning: reuses existing familiarity from the previous version, keeps frontend development as one of the project's explicit learning objectives, and Etapa 3's own constraint, no database yet, means the choice carries low risk either way, a flat file works the same regardless of framework. CartoDB Positron tiles kept for consistency with v0.2, revisit later if the dark brand palette calls for a different basemap.
+
+## 2026-09-02
+Brand identity for v0.3 is expected to change, but timing is not yet decided, deliberately left open. The palette (#0A0A0A, #00C188, #E5E5E5), Poppins typography, and Lucide icons applied to the Etapa 3 map are carried over from the original v0.1/v0.2-era brand documentation, not a v0.3-specific decision, and should be treated as provisional. The known tension between the light CartoDB Positron basemap and the dark UI shell, noted when the frontend stack was chosen, stays open and may resolve differently once the new identity exists, or may not resolve at all. No visual choice made so far in this repository should be assumed final; revisit brand tokens across the app once the new identity is defined.
