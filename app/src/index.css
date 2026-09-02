@@ -125,6 +125,18 @@ body {
   box-shadow: 0 0 0 1px currentColor;
 }
 
+/* Precision key: hollow, dashed ring, mirroring the fallback marker outline */
+.swatch.hollow {
+  background: transparent;
+  border: 1.75px dashed var(--muted);
+  box-shadow: none;
+}
+
+.precision-key {
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--ink-line);
+}
+
 .legend .note {
   margin-left: auto;
   font-size: 0.72rem;

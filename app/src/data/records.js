@@ -1,5 +1,6 @@
 import rawRecords from '../../../data/records.json'
 import zonaCoords from './zonaCoords.json'
+import localizacionCoords from './localizacionCoords.json'
 
 // Bundle the capture images straight from data/images/ at the repo root.
 // Keys come back as paths relative to this file, so they are normalised to the
@@ -17,10 +18,9 @@ const imageUrls = Object.fromEntries(
   ]),
 )
 
-// Records sharing a zona would stack on the exact same coordinate and hide each
-// other. Spread them evenly around a small circle instead. The offset is derived
-// from the record's position in the group, not random, so a marker does not move
-// between reloads.
+// Records sharing a coordinate would stack and hide each other. Spread them
+// evenly around a small circle instead. The offset is derived from the record's
+// position in the group, not random, so a marker does not move between reloads.
 const SPREAD_METRES = 70
 const METRES_PER_DEG_LAT = 111320
 
@@ -34,35 +34,87 @@ function spread(lat, lng, index, total) {
   return { lat: lat + dLat, lng: lng + dLng }
 }
 
-function build() {
-  const plotted = []
-  const skipped = []
-
-  // Group by zona first so the spread knows how many share each coordinate.
-  const byZona = new Map()
-  for (const record of rawRecords) {
-    if (!record.zona || !zonaCoords[record.zona]) {
-      skipped.push({
-        id: record.id,
-        reason: record.zona
-          ? `zona "${record.zona}" is not in zonaCoords.json`
-          : 'no zona value',
-      })
-      continue
+// A confirmed zona wins. Only when there is none does the record fall back to
+// the geocoded localizacion, which is less precise and is marked as such.
+function locate(record) {
+  if (record.zona) {
+    const hit = zonaCoords[record.zona]
+    if (hit) {
+      return {
+        source: 'zona',
+        lat: hit.lat,
+        lng: hit.lng,
+        groupKey: `zona:${record.zona}`,
+        precision: 'neighbourhood',
+        match: record.zona,
+      }
     }
-    if (!byZona.has(record.zona)) byZona.set(record.zona, [])
-    byZona.get(record.zona).push(record)
+    return {
+      source: 'skipped',
+      reason: `zona "${record.zona}" is not in zonaCoords.json`,
+    }
   }
 
-  for (const [zona, group] of byZona) {
-    const base = zonaCoords[zona]
-    group.forEach((record, index) => {
-      const { lat, lng } = spread(base.lat, base.lng, index, group.length)
+  const hit = localizacionCoords[record.localizacion]
+  if (!hit) {
+    return {
+      source: 'skipped',
+      reason: 'no zona, and localizacion is not in localizacionCoords.json',
+    }
+  }
+  if (hit.lat == null || hit.lng == null) {
+    return {
+      source: 'skipped',
+      reason: hit.reason || 'localizacion did not geocode',
+    }
+  }
+  return {
+    source: 'localizacion',
+    lat: hit.lat,
+    lng: hit.lng,
+    groupKey: `loc:${record.localizacion}`,
+    precision: hit.precision || 'unknown',
+    match: hit.match,
+  }
+}
+
+function build() {
+  const placed = []
+  const skipped = []
+
+  for (const record of rawRecords) {
+    const located = locate(record)
+    if (located.source === 'skipped') {
+      skipped.push({ id: record.id, reason: located.reason })
+      continue
+    }
+    placed.push({ record, located })
+  }
+
+  // Group by resolved coordinate so the spread knows how many share a point.
+  const groups = new Map()
+  for (const item of placed) {
+    const key = item.located.groupKey
+    if (!groups.has(key)) groups.set(key, [])
+    groups.get(key).push(item)
+  }
+
+  const plotted = []
+  for (const group of groups.values()) {
+    group.forEach(({ record, located }, index) => {
+      const { lat, lng } = spread(
+        located.lat,
+        located.lng,
+        index,
+        group.length,
+      )
       plotted.push({
         ...record,
         lat,
         lng,
-        sharesZona: group.length > 1,
+        source: located.source,
+        precision: located.precision,
+        match: located.match,
         images: (record.imagen || []).map((path) => ({
           path,
           url: imageUrls[path],
@@ -75,5 +127,9 @@ function build() {
 }
 
 export const { plotted, skipped } = build()
+export const plottedByZona = plotted.filter((r) => r.source === 'zona')
+export const plottedByLocalizacion = plotted.filter(
+  (r) => r.source === 'localizacion',
+)
 export const totalRecords = rawRecords.length
-export { zonaCoords }
+export { zonaCoords, localizacionCoords }

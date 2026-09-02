@@ -1,0 +1,70 @@
+{
+  "C/Puentedeume (colegio Rosalía de Castro)": {
+    "lat": 43.358331,
+    "lng": -8.413204,
+    "query": "Colexio Rosalia de Castro, Rua Pontedeume, A Coruna, Spain",
+    "match": "Colexio de Educación Infantil e Primaria Rosalía de Castro, Rúa Pontedeume, A Coruña",
+    "precision": "landmark"
+  },
+  "Contenedores del aparcamiento a la entrada del colegio Ramón de la Sagra": {
+    "lat": 43.34557,
+    "lng": -8.404742,
+    "query": "Colexio Ramon de la Sagra, A Coruna, Spain",
+    "match": "Colexio de Educación Infantil e Primaria Ramón de la Sagra, Ronda Camilo José Cela, 4, A Coruña",
+    "precision": "landmark"
+  },
+  "Calle Páramo, al lado del n° 29, zona calle Barcelona": {
+    "lat": 43.365249,
+    "lng": -8.422134,
+    "query": "Rua Paramo 29, A Coruna, Spain",
+    "match": "Rúa Páramo, 29, A Coruña",
+    "precision": "address"
+  },
+  "c/Tornos, 19": {
+    "lat": 43.358832,
+    "lng": -8.418666,
+    "query": "Rua Tornos 19, A Coruna, Spain",
+    "match": "Rúa Tornos, A Coruña",
+    "precision": "street"
+  },
+  "A unos metros del Mercadona de Ronda de Outeiro": {
+    "lat": 43.358288,
+    "lng": -8.419737,
+    "query": "Mercadona Ronda de Outeiro, A Coruna, Spain",
+    "match": "Mercadona, Ronda de Outeiro, 217, A Coruña",
+    "precision": "landmark"
+  },
+  "c/Cancela de Afuera, esquina con c/San Sebastián": {
+    "lat": 43.360732,
+    "lng": -8.415664,
+    "query": "Rua Cancela de Afora, A Coruna, Spain",
+    "match": "Rúa Cancela de Fóra, A Coruña",
+    "precision": "street"
+  },
+  "Médico Durán n° 2-4": {
+    "lat": 43.361703,
+    "lng": -8.408917,
+    "query": "Rua Medico Duran 2, A Coruna, Spain",
+    "match": "Rúa Médico Durán, 2, A Coruña",
+    "precision": "address"
+  },
+  "Enfrente parrilla Cazolo": {
+    "lat": 43.367166,
+    "lng": -8.42225,
+    "query": "Parrilla Cazolo, A Coruna, Spain",
+    "match": "Cazolo Furado, Avenida do Peruleiro, A Coruña",
+    "precision": "landmark"
+  },
+  "San Luis n 25": {
+    "lat": 43.354498,
+    "lng": -8.410081,
+    "query": "Rua San Luis 25, A Coruna, Spain",
+    "match": "Rúa San Luis, 25, A Coruña",
+    "precision": "address"
+  },
+  "Calle siguiente Alós Geranios": {
+    "lat": null,
+    "lng": null,
+    "reason": "Post says 'Calle siguiente', the street after Os Xeranios, which street that is the post never states. Geocoding Os Xeranios itself would place the marker on the wrong street."
+  }
+}

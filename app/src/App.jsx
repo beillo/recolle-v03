@@ -1,9 +1,15 @@
 import { useEffect } from 'react'
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet'
-import { MapPin, Calendar, ImageOff, ExternalLink } from 'lucide-react'
+import { MapPin, Calendar, ImageOff, ExternalLink, Crosshair } from 'lucide-react'
 import 'leaflet/dist/leaflet.css'
 
-import { plotted, skipped, totalRecords } from './data/records.js'
+import {
+  plotted,
+  skipped,
+  totalRecords,
+  plottedByZona,
+  plottedByLocalizacion,
+} from './data/records.js'
 
 const ICON = { size: 13, strokeWidth: 1.75 }
 
@@ -50,9 +56,14 @@ function Legend() {
           </span>
         </span>
       ))}
+      <span className="legend-item precision-key">
+        <span className="swatch hollow" />
+        <span style={{ color: 'var(--muted)' }}>
+          Dashed outline: placed from localizacion, lower precision
+        </span>
+      </span>
       <span className="note">
-        Markers sit at neighbourhood centre, not the exact spot. Records sharing
-        a zona are spread apart so they stay clickable.
+        Records sharing a coordinate are spread apart so they stay clickable.
       </span>
     </div>
   )
@@ -83,6 +94,14 @@ function RecordPopup({ record }) {
             <span>{record.fecha}</span>
           </span>
         )}
+        <span className="row">
+          <Crosshair size={ICON.size} strokeWidth={ICON.strokeWidth} />
+          <span>
+            {record.source === 'zona'
+              ? `Confirmed zona, neighbourhood centre`
+              : `Geocoded from localizacion (${record.precision}): ${record.match}`}
+          </span>
+        </span>
       </div>
 
       {record.images.length > 0 && (
@@ -123,8 +142,18 @@ function RecordPopup({ record }) {
 export default function App() {
   useEffect(() => {
     console.log(
-      `[recolle] ${plotted.length} of ${totalRecords} records plotted, ` +
-        `${skipped.length} skipped`,
+      `[recolle] ${totalRecords} records: ` +
+        `${plottedByZona.length} plotted via confirmed zona, ` +
+        `${plottedByLocalizacion.length} via localizacion fallback, ` +
+        `${skipped.length} still skipped`,
+    )
+    console.table(
+      plotted.map((r) => ({
+        id: r.id,
+        via: r.source,
+        precision: r.precision,
+        match: r.match,
+      })),
     )
     if (skipped.length) {
       console.table(skipped)
@@ -140,10 +169,13 @@ export default function App() {
         <span className="stage">Etapa 3 / minimal map</span>
         <div className="counts">
           <span className="count">
-            <strong>{plotted.length}</strong> plotted
+            <strong>{plottedByZona.length}</strong> via zona
           </span>
           <span className="count">
-            <strong>{skipped.length}</strong> without zona
+            <strong>{plottedByLocalizacion.length}</strong> via localizacion
+          </span>
+          <span className="count">
+            <strong>{skipped.length}</strong> unplaced
           </span>
           <span className="count">
             <strong>{totalRecords}</strong> captured
@@ -159,22 +191,31 @@ export default function App() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
             url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
           />
-          {plotted.map((record) => (
+          {plotted.map((record) => {
+            const approximate = record.source !== 'zona'
+            return (
             <CircleMarker
               key={record.id}
               center={[record.lat, record.lng]}
               radius={9}
               pathOptions={{
-                color: '#0a0a0a',
+                // Same colour by categoria either way. Precision is carried by
+                // the outline: solid ring for a confirmed zona, dashed ring and
+                // a lighter fill for a coordinate geocoded from localizacion.
+                color: approximate
+                  ? MARKER_COLOURS[record.categoria] || FALLBACK_COLOUR
+                  : '#0a0a0a',
                 weight: 1.75,
+                dashArray: approximate ? '3 3' : undefined,
                 fillColor:
                   MARKER_COLOURS[record.categoria] || FALLBACK_COLOUR,
-                fillOpacity: 0.95,
+                fillOpacity: approximate ? 0.45 : 0.95,
               }}
             >
               <RecordPopup record={record} />
             </CircleMarker>
-          ))}
+            )
+          })}
         </MapContainer>
       </div>
     </div>
