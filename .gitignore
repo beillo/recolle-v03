@@ -7,3 +7,6 @@ dist/
 Thumbs.db
 *.log
 .vscode/
+
+# Raw scraped exports, contain personal data, never committed
+data/raw/

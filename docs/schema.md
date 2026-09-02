@@ -23,3 +23,7 @@ Draft schema for the manual capture stage (Etapa 2). Not final, meant to be test
 - Does `localizacion` come out usable at neighborhood level, or do posts frequently omit any location cue
 - Does `confidence` mean anything when a human is the one judging, or is it redundant at this stage
 - Does `zona` add anything `localizacion` doesn't already cover
+
+## Note after the first batch, 2026-09-02
+
+This batch, records 017 to 031, came from an Apify scrape of the source group rather than manual copy. Two consequences for the schema. First, the structured output supplied `fecha` and `fuente.url` reliably for the first time, both were weak points when capturing by hand. Second, it introduced an OCR caption per image, `ocrText`, a data point the formal schema does not have. It carried real signal here, naming the discarded object where the post text gave only an address, and it is worth considering as a field in a future version.

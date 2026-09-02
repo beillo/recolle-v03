@@ -1,1 +1,280 @@
-[]
+[
+  {
+    "id": "017",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "C/Puentedeume (colegio Rosalía de Castro)",
+    "fecha": "2026-09-02",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1708823133991323/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "C/Puentedeume (colegio Rosalía de Castro)",
+    "imagen": [
+      "data/images/017-1.jpg",
+      "data/images/017-2.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "018",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Contenedores del aparcamiento a la entrada del colegio Ramón de la Sagra",
+    "fecha": "2026-09-02",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1708719857334984/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Por la tarde voy a dejar estas cosas en una caja al lado de los contenedores que hay en la zona de aparcamiento a la entrada del colegio Ramón de la Sagra.",
+    "imagen": [
+      "data/images/018-1.jpg",
+      "data/images/018-2.jpg",
+      "data/images/018-3.jpg",
+      "data/images/018-4.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "019",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Zona Riazor",
+    "fecha": "2026-09-02",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1708573590682944/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "2años\nRecoger Coruña zona riazor",
+    "imagen": [
+      "data/images/019.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": "Riazor"
+  },
+  {
+    "id": "020",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Zalaeta con Socorro",
+    "fecha": "2026-09-01",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1708132694060367/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "¿Pódense reutilizar para algo as baterías? Está en Zalaeta con Socorro",
+    "imagen": [
+      "data/images/020.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": "Zalaeta"
+  },
+  {
+    "id": "021",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle Páramo, al lado del n° 29, zona calle Barcelona",
+    "fecha": "2026-09-01",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1708131824060454/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle Páramo al lado del n° 29. Zona calla Barcelona.",
+    "imagen": [
+      "data/images/021.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "022",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "c/Tornos, 19",
+    "fecha": "2026-09-01",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1708131010727202/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "c/Tornos, 19",
+    "imagen": [
+      "data/images/022-1.jpg",
+      "data/images/022-2.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "023",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "A unos metros del Mercadona de Ronda de Outeiro",
+    "fecha": "2026-09-01",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1708128634060773/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "A unos metros del Mercadona de Ronda de Outeiro.",
+    "imagen": [
+      "data/images/023.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "024",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "c/Cancela de Afuera, esquina con c/San Sebastián",
+    "fecha": "2026-09-01",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1708115007395469/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "c/Cancela de afuera, esquina con c/San Sebastián ",
+    "imagen": [
+      "data/images/024-1.jpg",
+      "data/images/024-2.jpg",
+      "data/images/024-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "025",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle siguiente Alós Geranios",
+    "fecha": "2026-09-01",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1708065367400433/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle siguiente Alós Geranios un bloque que están pintando , se ven en muy buen estado ahora 18'30",
+    "imagen": [
+      "data/images/025-1.jpg",
+      "data/images/025-2.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "026",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Médico Durán n° 2-4",
+    "fecha": "2026-09-01",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1707812587425711/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Médico Durán  N°2_4\nY no me hablen x messenger que yo no tengo ni recogo nada,el que la quiera tiene que ir por ella",
+    "imagen": [
+      "data/images/026.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "027",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Novo Mesoiro 1",
+    "fecha": "2026-09-01",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1707650270775276/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Novo Mesoiro 1",
+    "imagen": [
+      "data/images/027.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": "Novo Mesoiro"
+  },
+  {
+    "id": "028",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Enfrente parrilla Cazolo",
+    "fecha": "2026-09-01",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1707596400780663/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Enfrente parilla cazolo",
+    "imagen": [
+      "data/images/028.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "029",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Zalaeta",
+    "fecha": "2026-08-31",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1707375284136108/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Adornos de flores secas en Zalaeta con sigo",
+    "imagen": [
+      "data/images/029.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": "Zalaeta"
+  },
+  {
+    "id": "030",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "San Luis n 25",
+    "fecha": "2026-08-31",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1707320477474922/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "San  Luis n 25",
+    "imagen": [
+      "data/images/030.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "031",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "C/ Juan González Rguez, delante del n°5, zona Peruleiro",
+    "fecha": "2026-08-31",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1707296620810641/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "C/ Juan González Rguez, delante del n°5. Zona Peruleiro.",
+    "imagen": [
+      "data/images/031.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": "Peruleiro"
+  }
+]
