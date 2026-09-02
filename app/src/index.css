@@ -1,0 +1,242 @@
+/* Brand tokens. Accent is deliberately rationed: it appears on the wordmark
+   dot and on the circular_item marker colour, nowhere else. */
+:root {
+  --ink: #0a0a0a;
+  --light: #e5e5e5;
+  --accent: #00c188;
+
+  --ink-raised: #141414;
+  --ink-line: #262626;
+  --muted: #8f8f8f;
+
+  --cat-circular: #00c188;
+  --cat-dumping: #ff5a5f;
+  --cat-bulk: #f5a524;
+  --cat-other: #8f8f8f;
+
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-weight: 300;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--ink);
+  color: var(--light);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.9rem 1.25rem;
+  background: var(--ink);
+  border-bottom: 1px solid var(--ink-line);
+  flex-wrap: wrap;
+}
+
+.wordmark {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.wordmark .dot {
+  color: var(--accent);
+}
+
+.header .stage {
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.counts {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.counts .count {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.counts .count strong {
+  font-weight: 500;
+  color: var(--light);
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 1.25rem;
+  background: var(--ink-raised);
+  border-bottom: 1px solid var(--ink-line);
+  font-size: 0.75rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.legend-item.absent {
+  opacity: 0.45;
+}
+
+.swatch {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  border: 1.75px solid var(--ink);
+  box-shadow: 0 0 0 1px currentColor;
+}
+
+.legend .note {
+  margin-left: auto;
+  font-size: 0.72rem;
+}
+
+/* Map */
+.map-wrap {
+  flex: 1;
+  min-height: 0;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: var(--ink);
+  font-family: inherit;
+}
+
+/* Popup, restyled to sit on the dark palette rather than Leaflet's white */
+.leaflet-popup-content-wrapper {
+  background: var(--ink-raised);
+  color: var(--light);
+  border-radius: 6px;
+  border: 1px solid var(--ink-line);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 45%);
+}
+
+.leaflet-popup-tip {
+  background: var(--ink-raised);
+  border: 1px solid var(--ink-line);
+}
+
+.leaflet-popup-content {
+  margin: 0.85rem;
+  width: 250px !important;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  color: var(--muted);
+}
+
+.popup-cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.popup-desc {
+  margin: 0.6rem 0;
+  font-weight: 300;
+  color: var(--light);
+}
+
+.popup-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--ink-line);
+  font-size: 0.73rem;
+  color: var(--muted);
+}
+
+.popup-meta .row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.popup-meta .row svg {
+  flex: none;
+  margin-top: 0.1rem;
+}
+
+.popup-images {
+  display: flex;
+  gap: 0.35rem;
+  margin-top: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.popup-images img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--ink-line);
+  display: block;
+}
+
+.popup-missing {
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.popup-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.7rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.popup-source:hover {
+  color: var(--light);
+}

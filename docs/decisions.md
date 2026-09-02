@@ -34,3 +34,6 @@ Manual capture and Apify scraping were tested in parallel, Apify adopted as the 
 
 ## 2026-09-02
 Human review of the 6 records the automated batch flagged as ambiguous or defaulted found two real miscategorizations, both corrected: id 020 to `illegal_dumping`, hazardous waste, batteries, and id 023 to `bulk_waste`, an item beside a container in a way that reads as dumped rather than offered. The remaining flagged records, 022, 028, 030 and 031, were confirmed as `circular_item` on review, no change needed. This is the first batch where `categoria` received actual human judgment rather than a default, closing the gap the previous batch, 017 to 031, the initial import, left open.
+
+## 2026-09-02
+Frontend stack for the minimal map (Etapa 3) chosen: React with Vite and Leaflet, same combination as v0.2. Reasoning: reuses existing familiarity from the previous version, keeps frontend development as one of the project's explicit learning objectives, and Etapa 3's own constraint, no database yet, means the choice carries low risk either way, a flat file works the same regardless of framework. CartoDB Positron tiles kept for consistency with v0.2, revisit later if the dark brand palette calls for a different basemap.
