@@ -36,3 +36,12 @@ Hotspot and recurrence detection is a legitimate long term requirement, but it c
 
 - Coordinate is stored as a plain attribute on the record, `lat` and `lng` fields directly on the record, not as a separate place entity with its own identity. The alternative, normalising place into a joined table or collection, was considered and rejected.
 - The report's unit of analysis is both zona and point, with zona as the primary aggregation unit, matching the 4.7 hotspot by zone framing and the verification report deliverable. Point level precision is kept as a secondary need, for map display and any future radius based feature.
+
+## Modeling decisions, 2026-09-04
+
+Field level follow up to the entry above. Added as a new dated block rather than by rewriting the 2026-09-03 bullets, so the sequence in which the model was settled stays readable.
+
+- The record carries `lat`, `lng` and `precision` directly. `precision` is a first class field, not geocoding metadata, because the 4.7 radius query is specified as filtered by coordinate precision: a radius query that cannot read precision cannot be answered correctly.
+- `query`, the normalised string actually sent to Photon, and `match`, the string Photon returned, are preserved for now, so the migration out of the two lookup files loses no information. Whether they belong in the final model is left open, to be decided once it is clear whether anything reads them other than a human auditing a coordinate by hand.
+- Precision values in use today are four: `neighbourhood` for records placed from a confirmed zona centroid, assigned in code rather than stored, and `landmark`, `address` and `street`, assigned per entry by the localizacion geocoding step. A record that failed to geocode, currently only id 025, has no coordinate and no precision, it carries a `reason` string instead.
+- This describes the target model. The running code still keeps coordinates in `app/src/data/zonaCoords.json` and `app/src/data/localizacionCoords.json` and joins them to the records at load time, so applying this decision is a migration that has not been done yet.
