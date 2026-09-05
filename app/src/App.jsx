@@ -1,15 +1,9 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet'
 import { MapPin, Calendar, ImageOff, ExternalLink, Crosshair } from 'lucide-react'
 import 'leaflet/dist/leaflet.css'
 
-import {
-  plotted,
-  skipped,
-  totalRecords,
-  plottedByZona,
-  plottedByLocalizacion,
-} from './data/records.js'
+import { loadRecords, loadZonaCounts } from './data/records.js'
 
 const ICON = { size: 13, strokeWidth: 1.75 }
 
@@ -36,7 +30,7 @@ const CATEGORY_LABELS = {
 
 const A_CORUNA = [43.3623, -8.4115]
 
-function Legend() {
+function Legend({ plotted }) {
   const present = new Set(plotted.map((r) => r.categoria))
   return (
     <div className="legend">
@@ -65,6 +59,22 @@ function Legend() {
       <span className="note">
         Records sharing a coordinate are spread apart so they stay clickable.
       </span>
+    </div>
+  )
+}
+
+function ZonaPanel({ counts }) {
+  return (
+    <div className="zona-panel">
+      <span className="zona-panel-title">Records by zona</span>
+      <ul>
+        {counts.map(({ zona, count }) => (
+          <li key={zona ?? 'none'}>
+            <span>{zona ?? 'sin zona confirmada'}</span>
+            <strong>{count}</strong>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
@@ -140,25 +150,52 @@ function RecordPopup({ record }) {
 }
 
 export default function App() {
+  const [records, setRecords] = useState(null)
+  const [zonaCounts, setZonaCounts] = useState(null)
+  const [loadError, setLoadError] = useState(null)
+
   useEffect(() => {
-    console.log(
-      `[recolle] ${totalRecords} records: ` +
-        `${plottedByZona.length} plotted via confirmed zona, ` +
-        `${plottedByLocalizacion.length} via localizacion fallback, ` +
-        `${skipped.length} still skipped`,
-    )
-    console.table(
-      plotted.map((r) => ({
-        id: r.id,
-        via: r.source,
-        precision: r.precision,
-        match: r.match,
-      })),
-    )
-    if (skipped.length) {
-      console.table(skipped)
-    }
+    loadRecords()
+      .then((result) => {
+        setRecords(result)
+        const { totalRecords, plottedByZona, plottedByLocalizacion, plotted, skipped } = result
+        console.log(
+          `[recolle] ${totalRecords} records: ` +
+            `${plottedByZona.length} plotted via confirmed zona, ` +
+            `${plottedByLocalizacion.length} via localizacion fallback, ` +
+            `${skipped.length} still skipped`,
+        )
+        console.table(
+          plotted.map((r) => ({
+            id: r.id,
+            via: r.source,
+            precision: r.precision,
+            match: r.match,
+          })),
+        )
+        if (skipped.length) {
+          console.table(skipped)
+        }
+      })
+      .catch((err) => setLoadError(err.message))
+
+    loadZonaCounts()
+      .then((counts) => {
+        setZonaCounts(counts)
+        console.log('[recolle] records_by_zona:')
+        console.table(counts)
+      })
+      .catch((err) => console.error('[recolle] records_by_zona failed:', err.message))
   }, [])
+
+  if (loadError) {
+    return <div className="app-message">Failed to load records: {loadError}</div>
+  }
+  if (!records) {
+    return <div className="app-message">Loading records…</div>
+  }
+
+  const { plotted, skipped, totalRecords, plottedByZona, plottedByLocalizacion } = records
 
   return (
     <div className="app">
@@ -183,9 +220,10 @@ export default function App() {
         </div>
       </header>
 
-      <Legend />
+      <Legend plotted={plotted} />
 
       <div className="map-wrap">
+        {zonaCounts && <ZonaPanel counts={zonaCounts} />}
         <MapContainer center={A_CORUNA} zoom={13} scrollWheelZoom>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'

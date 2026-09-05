@@ -1,10 +1,9 @@
-import rawRecords from '../../../data/records.json'
-import zonaCoords from './zonaCoords.json'
-import localizacionCoords from './localizacionCoords.json'
+import { supabase } from '../lib/supabaseClient.js'
 
 // Bundle the capture images straight from data/images/ at the repo root.
 // Keys come back as paths relative to this file, so they are normalised to the
-// "data/images/017-1.jpg" form the records themselves use.
+// "data/images/017-1.jpg" form the records themselves use. Images stay local
+// files for now, only the record data itself moved to Supabase in Etapa 4.6.
 const imageModules = import.meta.glob('../../../data/images/*.jpg', {
   eager: true,
   query: '?url',
@@ -34,102 +33,59 @@ function spread(lat, lng, index, total) {
   return { lat: lat + dLat, lng: lng + dLng }
 }
 
-// A confirmed zona wins. Only when there is none does the record fall back to
-// the geocoded localizacion, which is less precise and is marked as such.
-function locate(record) {
-  if (record.zona) {
-    const hit = zonaCoords[record.zona]
-    if (hit) {
-      return {
-        source: 'zona',
-        lat: hit.lat,
-        lng: hit.lng,
-        groupKey: `zona:${record.zona}`,
-        precision: 'neighbourhood',
-        match: record.zona,
-      }
-    }
-    return {
-      source: 'skipped',
-      reason: `zona "${record.zona}" is not in zonaCoords.json`,
-    }
-  }
-
-  const hit = localizacionCoords[record.localizacion]
-  if (!hit) {
-    return {
-      source: 'skipped',
-      reason: 'no zona, and localizacion is not in localizacionCoords.json',
-    }
-  }
-  if (hit.lat == null || hit.lng == null) {
-    return {
-      source: 'skipped',
-      reason: hit.reason || 'localizacion did not geocode',
-    }
-  }
-  return {
-    source: 'localizacion',
-    lat: hit.lat,
-    lng: hit.lng,
-    groupKey: `loc:${record.localizacion}`,
-    precision: hit.precision || 'unknown',
-    match: hit.match,
-  }
+// precision "neighbourhood" only ever comes from a confirmed zona centroid,
+// see db/seed.sql and the locate() logic it replaced, so it is what "source"
+// used to encode: zona if neighbourhood, geocoded localizacion otherwise.
+function sourceFromPrecision(precision) {
+  return precision === 'neighbourhood' ? 'zona' : 'localizacion'
 }
 
-function build() {
+export async function loadZonaCounts() {
+  const { data, error } = await supabase.rpc('records_by_zona')
+  if (error) throw error
+  return data
+}
+
+export async function loadRecords() {
+  const { data, error } = await supabase.from('records').select('*')
+  if (error) throw error
+
   const placed = []
   const skipped = []
 
-  for (const record of rawRecords) {
-    const located = locate(record)
-    if (located.source === 'skipped') {
-      skipped.push({ id: record.id, reason: located.reason })
+  for (const row of data) {
+    if (row.lat == null || row.lng == null) {
+      skipped.push({ id: row.id, reason: row.reason })
       continue
     }
-    placed.push({ record, located })
+    placed.push({
+      ...row,
+      fuente: { tipo: row.fuente_tipo, url: row.fuente_url, grupo: row.fuente_grupo },
+      images: (row.imagen || []).map((path) => ({ path, url: imageUrls[path] })),
+      source: sourceFromPrecision(row.precision),
+      groupKey: `${row.lat},${row.lng}`,
+    })
   }
 
-  // Group by resolved coordinate so the spread knows how many share a point.
   const groups = new Map()
   for (const item of placed) {
-    const key = item.located.groupKey
-    if (!groups.has(key)) groups.set(key, [])
-    groups.get(key).push(item)
+    if (!groups.has(item.groupKey)) groups.set(item.groupKey, [])
+    groups.get(item.groupKey).push(item)
   }
 
   const plotted = []
   for (const group of groups.values()) {
-    group.forEach(({ record, located }, index) => {
-      const { lat, lng } = spread(
-        located.lat,
-        located.lng,
-        index,
-        group.length,
-      )
-      plotted.push({
-        ...record,
-        lat,
-        lng,
-        source: located.source,
-        precision: located.precision,
-        match: located.match,
-        images: (record.imagen || []).map((path) => ({
-          path,
-          url: imageUrls[path],
-        })),
-      })
+    group.forEach((item, index) => {
+      const { lat, lng } = spread(item.lat, item.lng, index, group.length)
+      plotted.push({ ...item, lat, lng })
     })
   }
 
-  return { plotted, skipped }
+  return {
+    plotted,
+    skipped,
+    totalRecords: data.length,
+    plottedByZona: plotted.filter((r) => r.source === 'zona'),
+    plottedByLocalizacion: plotted.filter((r) => r.source === 'localizacion'),
+  }
 }
-
-export const { plotted, skipped } = build()
-export const plottedByZona = plotted.filter((r) => r.source === 'zona')
-export const plottedByLocalizacion = plotted.filter(
-  (r) => r.source === 'localizacion',
-)
-export const totalRecords = rawRecords.length
-export { zonaCoords, localizacionCoords }
