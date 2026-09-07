@@ -61,3 +61,11 @@ One collision to guard against, already seen: record 017 reads "C/Puentedeume", 
 ### Not yet a field: ocrText
 
 Apify captures carry an OCR caption per image, one line describing what the photo appears to show. It is not part of the schema and does not appear in `data/records.json`. It earned its keep in this batch, naming the discarded object on records whose post text gave only a street address, and it fed the `confidence` value on those. Worth considering as a formal field in a future version.
+
+### Source variations, added 2026-09-07 with the second source
+
+The Concello da Coruna avisos de movilidad source, adopted in Etapa 5, does not fit the shape the Facebook batch established. Three differences, none of which change the field list above:
+
+- **`fuente` may have two keys, `{ tipo, url }`.** `grupo` is Facebook specific, it names the group a post came from, and a source that is not a group has nothing to put there. The three key form described above is the Facebook case, not a requirement. `db/schema.sql` already allows this, `fuente_grupo` is nullable, no change was needed there.
+- **A source may supply its own coordinate.** The Concello page publishes a latitude and longitude per notice in RDFa meta tags, so `lat`, `lng` and `precision` are read straight from the source and the Photon fallback is not used at all. `precision` is still set, `street` for these records, and `query` and `match` stay null because there is no geocoding provenance to record. The A Coruna envelope check still runs against the supplied coordinate. A coordinate that arrives with the record is not automatically trusted.
+- **`nota`, a new optional key.** Free text carrying a caveat about the source that has nowhere else to live. Used once so far, on record 033, to record that the Concello's `endDate` of 2051-01-01 is a sentinel meaning no end date set, not a real closure date. It exists in `data/records.json` only. There is no `nota` column in `db/schema.sql`, so the same text is carried as a SQL comment in `db/seed.sql`. If it earns a second and third use it should become a real column rather than stay a JSON only field.

@@ -22,3 +22,19 @@ Y no me hablen x messenger que yo no tengo ni recogo nada,el que la quiera tiene
   ('029', 'circular_item', null, 'Zalaeta', '2026-08-31', 'facebook_group', 'https://www.facebook.com/groups/270958641111120/permalink/1707375284136108/', 'Lixo de luxo Coruña', 'Adornos de flores secas en Zalaeta con sigo', array['data/images/029.jpg'], 0.9, 'Zalaeta', 43.373955, -8.400872, 'neighbourhood', null, null, null),
   ('030', 'circular_item', null, 'San Luis n 25', '2026-08-31', 'facebook_group', 'https://www.facebook.com/groups/270958641111120/permalink/1707320477474922/', 'Lixo de luxo Coruña', 'San  Luis n 25', array['data/images/030.jpg'], 0.6, null, 43.354498, -8.410081, 'address', 'Rua San Luis 25, A Coruna, Spain', 'Rúa San Luis, 25, A Coruña', null),
   ('031', 'circular_item', null, 'C/ Juan González Rguez, delante del n°5, zona Peruleiro', '2026-08-31', 'facebook_group', 'https://www.facebook.com/groups/270958641111120/permalink/1707296620810641/', 'Lixo de luxo Coruña', 'C/ Juan González Rguez, delante del n°5. Zona Peruleiro.', array['data/images/031.jpg'], 0.9, 'Peruleiro', 43.367614, -8.422219, 'neighbourhood', null, null, null);
+
+-- Etapa 5. Second data source: Concello da Coruna, avisos e incidencias de
+-- movilidad. Two of eight sampled notices kept, the ones that describe a real
+-- physical intervention on the street. fuente_grupo is null: grupo is a
+-- Facebook-only field and the column already allows it. lat/lng come from the
+-- source page's own RDFa geo tags, not from the Photon fallback, so precision
+-- is 'street' with no query/match provenance to record. geom is generated.
+-- Run after the insert above; these are additive and touch no existing row.
+insert into public.records (id, categoria, severidad, localizacion, fecha, fuente_tipo, fuente_url, fuente_grupo, descripcion, imagen, confidence, zona, lat, lng, precision, query, match, reason)
+values
+  ('032', 'urban_damage', 1, 'Calle Xubias de Abaixo. 15006', '2026-03-23', 'concello', 'https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad/incidencia-de-movilidad/corte-en-xubias-de-abaixo/suceso/1453914684533', null, 'Corte en Xubias de Abaixo / Transporte / Tráfico', array[]::text[], 1.0, null, 43.341497, -8.387411, 'street', null, null, null),
+  -- 033: the source endDate is 2051-01-01, a Concello sentinel meaning "no end
+  -- date set", not a real closure date. Nothing downstream should read it as
+  -- evidence the works are still active or that they ended on that date. The
+  -- same text is carried as a "nota" key on record 033 in data/records.json.
+  ('033', 'urban_damage', 1, 'Avda. Sardiñeira.', '2025-05-20', 'concello', 'https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad/incidencia-de-movilidad/obras-en-avenida-da-sardineira/suceso/1453894066138', null, 'Obras en Avenida da Sardiñeira / Transporte / Autobuses urbanos', array[]::text[], 1.0, 'Os Mallos', 43.351849, -8.412201, 'street', null, null, null);

@@ -276,5 +276,42 @@
     ],
     "confidence": 0.9,
     "zona": "Peruleiro"
+  },
+  {
+    "id": "032",
+    "categoria": "urban_damage",
+    "severidad": 1,
+    "localizacion": "Calle Xubias de Abaixo. 15006",
+    "fecha": "2026-03-23",
+    "fuente": {
+      "tipo": "concello",
+      "url": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad/incidencia-de-movilidad/corte-en-xubias-de-abaixo/suceso/1453914684533"
+    },
+    "descripcion": "Corte en Xubias de Abaixo / Transporte / Tráfico",
+    "imagen": [],
+    "confidence": 1.0,
+    "zona": null,
+    "lat": 43.341497,
+    "lng": -8.387411,
+    "precision": "street"
+  },
+  {
+    "id": "033",
+    "categoria": "urban_damage",
+    "severidad": 1,
+    "localizacion": "Avda. Sardiñeira.",
+    "fecha": "2025-05-20",
+    "fuente": {
+      "tipo": "concello",
+      "url": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad/incidencia-de-movilidad/obras-en-avenida-da-sardineira/suceso/1453894066138"
+    },
+    "descripcion": "Obras en Avenida da Sardiñeira / Transporte / Autobuses urbanos",
+    "imagen": [],
+    "confidence": 1.0,
+    "zona": "Os Mallos",
+    "lat": 43.351849,
+    "lng": -8.412201,
+    "precision": "street",
+    "nota": "Source endDate is 2051-01-01, a Concello sentinel meaning no end date set, not a real closure date. Nothing downstream should read it as evidence that these works are still active or that they were resolved on that date."
   }
 ]
