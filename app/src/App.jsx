@@ -228,9 +228,23 @@ export default function App() {
       <div className="map-wrap">
         {zonaCounts && <ZonaPanel counts={zonaCounts} />}
         <MapContainer center={A_CORUNA} zoom={13} scrollWheelZoom>
+          {/*
+            Esri Light Gray, replacing CartoDB Positron. Carto now stamps
+            "API KEY REQUIRED" across its public basemap tiles and still
+            answers 200 with a valid PNG, so the failure was invisible to the
+            console and only showed on screen. Esri needs no key.
+            Two layers: Esri splits the canvas into a label free Base and a
+            separate Reference layer carrying the street names, and the map is
+            about placing incidents on streets, so both are needed.
+            Note the tile path is {z}/{y}/{x}, y before x, not Leaflet's usual
+            order, and there is no {s} subdomain.
+          */}
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-            url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+            attribution='Tiles &copy; <a href="https://www.esri.com">Esri</a>, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, and the GIS user community'
+            url="https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+          />
+          <TileLayer
+            url="https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
           />
           {plotted.map((record) => {
             const approximate = record.source !== 'zona'
