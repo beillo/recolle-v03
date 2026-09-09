@@ -85,7 +85,11 @@ export async function loadRecords() {
     plotted,
     skipped,
     totalRecords: data.length,
-    plottedByZona: plotted.filter((r) => r.source === 'zona'),
-    plottedByLocalizacion: plotted.filter((r) => r.source === 'localizacion'),
+    // Whether zona was confirmed is independent of precision: record 033
+    // has zona set but precision "street", an official Concello point, not
+    // a centroid guess. source (above) still answers "how precise is this
+    // coordinate", these two answer "was a zona confirmed for this record".
+    plottedByZona: plotted.filter((r) => r.zona != null),
+    plottedByLocalizacion: plotted.filter((r) => r.zona == null),
   }
 }

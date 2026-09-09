@@ -11,6 +11,7 @@ const CATEGORY_COLOURS = {
   circular_item: 'var(--cat-circular)',
   illegal_dumping: 'var(--cat-dumping)',
   bulk_waste: 'var(--cat-bulk)',
+  urban_damage: 'var(--cat-damage)',
 }
 
 // Resolved values, since Leaflet paints markers onto a canvas/SVG layer and
@@ -19,6 +20,7 @@ const MARKER_COLOURS = {
   circular_item: '#00c188',
   illegal_dumping: '#ff5a5f',
   bulk_waste: '#f5a524',
+  urban_damage: '#3da5f5',
 }
 const FALLBACK_COLOUR = '#8f8f8f'
 
@@ -26,6 +28,7 @@ const CATEGORY_LABELS = {
   circular_item: 'Circular item',
   illegal_dumping: 'Illegal dumping',
   bulk_waste: 'Bulk waste',
+  urban_damage: 'Urban damage',
 }
 
 const A_CORUNA = [43.3623, -8.4115]
