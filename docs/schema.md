@@ -47,11 +47,11 @@ Everything above is v1, kept as historical record and not edited. v2 is the sche
 
 A name appearing in post text is not enough, it gets confirmed before it is used:
 
-- Os Mallos
+- Os Mallos, confirmed 2026-09-09, records 072, 081 and 103
 - Monte Alto
 - Novo Mesoiro
 - Riazor, confirmed 2026-09-02, record 019
-- Zalaeta, confirmed 2026-09-02, records 020 and 029
+- Zalaeta, confirmed 2026-09-02, records 020 and 029, joined 2026-09-09 by record 040
 - Peruleiro, confirmed 2026-09-02, record 031
 
 The neighborhood names in the v1 `localizacion` row above are illustrations of granularity, not confirmations, and three of them, Agra do Orzan, Cidade Vella and Os Castros, appear in no record.

@@ -289,7 +289,7 @@
     },
     "descripcion": "Corte en Xubias de Abaixo / Transporte / Tráfico",
     "imagen": [],
-    "confidence": 1.0,
+    "confidence": 1,
     "zona": null,
     "lat": 43.341497,
     "lng": -8.387411,
@@ -307,11 +307,1734 @@
     },
     "descripcion": "Obras en Avenida da Sardiñeira / Transporte / Autobuses urbanos",
     "imagen": [],
-    "confidence": 1.0,
+    "confidence": 1,
     "zona": "Os Mallos",
     "lat": 43.351849,
     "lng": -8.412201,
     "precision": "street",
     "nota": "Source endDate is 2051-01-01, a Concello sentinel meaning no end date set, not a real closure date. Nothing downstream should read it as evidence that these works are still active or that they were resolved on that date."
+  },
+  {
+    "id": "034",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Avda ferrocarril 15 ahora",
+    "fecha": "2026-09-09",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714728580067445/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Avda ferrocarril 15 ahora",
+    "imagen": [
+      "data/images/034.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3524654,
+    "lng": -8.4099721,
+    "precision": "address",
+    "query": "Avenida do Ferrocarril, A Coruna, Spain",
+    "match": "A Coruña, 2, Avenida do Ferrocarril, A Coruña, Galicia"
+  },
+  {
+    "id": "035",
+    "categoria": "bulk_waste",
+    "severidad": 1,
+    "localizacion": "en Calle Postas con Avenida Plaza de Toros\nllevan un tiempo abandonadas",
+    "fecha": "2026-09-09",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714632486743721/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "en Calle Postas con Avenida Plaza de Toros\nllevan un tiempo abandonadas",
+    "imagen": [
+      "data/images/035.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": null,
+    "lng": null,
+    "precision": null,
+    "reason": "Post names two cross streets, Calle Postas and Avenida Plaza de Toros. Rua das Postas resolved to a same-named street in a different town, San Cibrao das Vinas, not A Coruna."
+  },
+  {
+    "id": "036",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Sofá prácticamente nuevo en R/Río de Monelos 2",
+    "fecha": "2026-09-09",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714595523414084/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Sofá prácticamente nuevo en R/Río de Monelos 2",
+    "imagen": [
+      "data/images/036.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3560818,
+    "lng": -8.39866,
+    "precision": "address",
+    "query": "Rua Rio Monelos 2, A Coruna, Spain",
+    "match": "2, Rúa Río de Monelos, A Coruña, Galicia"
+  },
+  {
+    "id": "037",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle Observatorio con Gil Vicente",
+    "fecha": "2026-09-09",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714587806748189/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle Observatorio con Gil Vicente",
+    "imagen": [
+      "data/images/037-1.jpg",
+      "data/images/037-2.jpg",
+      "data/images/037-3.jpg",
+      "data/images/037-4.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3646537,
+    "lng": -8.4206755,
+    "precision": "street",
+    "query": "Rua Observatorio, A Coruna, Spain",
+    "match": "Rúa Observatorio, A Coruña, Galicia"
+  },
+  {
+    "id": "038",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle Canceliña 11",
+    "fecha": "2026-09-09",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714585290081774/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle Canceliña 11",
+    "imagen": [
+      "data/images/038-1.jpg",
+      "data/images/038-2.jpg",
+      "data/images/038-3.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null,
+    "lat": 43.3650975,
+    "lng": -8.4211871,
+    "precision": "address",
+    "query": "Calle Canceliña 11, A Coruna, Spain",
+    "match": "11, Rúa Canceliña, A Coruña, Galicia"
+  },
+  {
+    "id": "039",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Sada. Rúa compostela.  En la bolsa camisetas Xl y mochila. La tele lleva desde ayer... SOLO QUEDA LA TELE",
+    "fecha": "2026-09-09",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714520840088219/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Sada. Rúa compostela.  En la bolsa camisetas Xl y mochila. La tele lleva desde ayer... SOLO QUEDA LA TELE",
+    "imagen": [
+      "data/images/039.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3517371,
+    "lng": -8.2567838,
+    "precision": "street",
+    "query": "Rua Compostela, Sada, Spain",
+    "match": "Rúa Compostela, Sada, Galicia"
+  },
+  {
+    "id": "040",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Plaza de Zalaeta hoy a las 11:15 h.",
+    "fecha": "2026-09-09",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714519520088351/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Plaza de Zalaeta hoy a las 11:15 h.",
+    "imagen": [
+      "data/images/040-1.jpg",
+      "data/images/040-2.jpg",
+      "data/images/040-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": "Zalaeta",
+    "lat": 43.373955,
+    "lng": -8.400872,
+    "precision": "neighbourhood"
+  },
+  {
+    "id": "041",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Fábrica de sueños.\nFrancisco añon n°3",
+    "fecha": "2026-09-09",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714514986755471/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Fábrica de sueños.\nFrancisco añon n°3",
+    "imagen": [
+      "data/images/041-1.jpg",
+      "data/images/041-2.jpg",
+      "data/images/041-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3183267,
+    "lng": -8.3488328,
+    "precision": "address",
+    "query": "Fábrica de sueños.\nFrancisco añon n°3, A Coruna, Spain",
+    "match": "3, Rúa Francisco Añón Paz, Oleiros, Galicia"
+  },
+  {
+    "id": "042",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Plaza de Lugo cerca del Gadis",
+    "fecha": "2026-09-09",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714422556764714/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Plaza de Lugo cerca del Gadis",
+    "imagen": [
+      "data/images/042.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3661492,
+    "lng": -8.4065776,
+    "precision": "landmark",
+    "query": "Praza de Lugo, A Coruna, Spain",
+    "match": "Praza de Lugo, A Coruña, Galicia"
+  },
+  {
+    "id": "043",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Plaza de Lugo al lado del Gadis",
+    "fecha": "2026-09-09",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714421303431506/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Plaza de Lugo al lado del Gadis",
+    "imagen": [
+      "data/images/043.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3661492,
+    "lng": -8.4065776,
+    "precision": "landmark",
+    "query": "Praza de Lugo, A Coruna, Spain",
+    "match": "Praza de Lugo, A Coruña, Galicia"
+  },
+  {
+    "id": "044",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Buenos días, en la ronda de Nelle en el número 61 acabo de ver esta cuna con el colchón",
+    "fecha": "2026-09-09",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714349706771999/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Buenos días, en la ronda de Nelle en el número 61 acabo de ver esta cuna con el colchón",
+    "imagen": [
+      "data/images/044-1.jpg",
+      "data/images/044-2.jpg",
+      "data/images/044-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3597339,
+    "lng": -8.4138923,
+    "precision": "address",
+    "query": "Ronda de Nelle 61, A Coruna, Spain",
+    "match": "61, Ronda de Nelle, A Coruña, Galicia"
+  },
+  {
+    "id": "045",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Me acaban de enviar esta foto.\nAvenida del Ejército,  10-12.",
+    "fecha": "2026-09-08",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714078396799130/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Me acaban de enviar esta foto.\nAvenida del Ejército,  10-12.",
+    "imagen": [
+      "data/images/045.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": null,
+    "lng": null,
+    "precision": null,
+    "reason": "Avenida del Ejercito resolved to Jerez de la Frontera, a different region, not A Coruna."
+  },
+  {
+    "id": "046",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "C/ arquitecto Rey Pedrería n° 6.",
+    "fecha": "2026-09-08",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714055846801385/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "C/ arquitecto Rey Pedrería n° 6.",
+    "imagen": [
+      "data/images/046.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3677626,
+    "lng": -8.4224853,
+    "precision": "address",
+    "query": "C/ arquitecto Rey Pedrería n° 6., A Coruna, Spain",
+    "match": "6, Rúa Arquitecto Rey Pedreira, A Coruña, Galicia"
+  },
+  {
+    "id": "047",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "C/ Almirante Mourelle n° 78. Entrando por Ronda d Outeiro.",
+    "fecha": "2026-09-08",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714051430135160/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "C/ Almirante Mourelle n° 78. Entrando por Ronda d Outeiro.",
+    "imagen": [
+      "data/images/047.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3646682,
+    "lng": -8.4234197,
+    "precision": "address",
+    "query": "Rua Almirante Mourelle 78, A Coruna, Spain",
+    "match": "78, Rúa Almirante Mourelle, A Coruña, Galicia"
+  },
+  {
+    "id": "048",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Delante del n° 1.",
+    "fecha": "2026-09-08",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714035466803423/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Delante del n° 1.",
+    "imagen": [
+      "data/images/048-1.jpg",
+      "data/images/048-2.jpg",
+      "data/images/048-3.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null,
+    "lat": null,
+    "lng": null,
+    "precision": null,
+    "reason": "Post gives no street or place name at all, only 'delante del n. 1' (in front of number 1), nothing to geocode."
+  },
+  {
+    "id": "049",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Ahora ronda de nelle 48 Abanca",
+    "fecha": "2026-09-08",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714031383470498/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Ahora ronda de nelle 48 Abanca",
+    "imagen": [
+      "data/images/049.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.358939,
+    "lng": -8.4097043,
+    "precision": "address",
+    "query": "Ahora ronda de nelle 48 Abanca, A Coruna, Spain",
+    "match": "Abanca, 48, Ronda de Nelle, A Coruña, Galicia"
+  },
+  {
+    "id": "050",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Ahora mismo en Fremap. Rúa Caballeros 29.",
+    "fecha": "2026-09-08",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1713597703513866/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Ahora mismo en Fremap. Rúa Caballeros 29.",
+    "imagen": [
+      "data/images/050-1.jpg",
+      "data/images/050-2.jpg",
+      "data/images/050-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": null,
+    "lng": null,
+    "precision": null,
+    "reason": "Rua Caballeros resolved to a same-named street in Santiago de Compostela, not confidently A Coruna."
+  },
+  {
+    "id": "051",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Praza de Sta. Catalina.\n2 tableiros de madeira maciza.",
+    "fecha": "2026-09-07",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1713266533546983/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Praza de Sta. Catalina.\n2 tableiros de madeira maciza.",
+    "imagen": [
+      "data/images/051.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": null,
+    "lng": null,
+    "precision": null,
+    "reason": "Praza de Santa Catalina resolved to Fisterra, a different town, not A Coruna."
+  },
+  {
+    "id": "052",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Fonte de San Andrés. Alfombra e dous paraugas",
+    "fecha": "2026-09-07",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1713221576884812/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Fonte de San Andrés. Alfombra e dous paraugas",
+    "imagen": [
+      "data/images/052.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3701423,
+    "lng": -8.4019247,
+    "precision": "landmark",
+    "query": "Praza de San Andres, A Coruna, Spain",
+    "match": "Praza de San Andrés, A Coruña, Galicia"
+  },
+  {
+    "id": "053",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "C/Cuesta de la Unión 16",
+    "fecha": "2026-09-07",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1713216840218619/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "C/Cuesta de la Unión 16",
+    "imagen": [
+      "data/images/053-1.jpg",
+      "data/images/053-2.jpg",
+      "data/images/053-3.jpg",
+      "data/images/053-4.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3002595,
+    "lng": -8.3796085,
+    "precision": "landmark",
+    "query": "Rua Cuesta de la Union, A Coruna, Spain",
+    "match": "Aeroporto da Coruña, Rúa Manuel Andrés Reboredo, Culleredo, Galicia"
+  },
+  {
+    "id": "054",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "En Arquitecto Rey Pedreira 9. Ahí sigue",
+    "fecha": "2026-09-07",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1713028633570773/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "En Arquitecto Rey Pedreira 9. Ahí sigue",
+    "imagen": [
+      "data/images/054.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3676279,
+    "lng": -8.4224197,
+    "precision": "address",
+    "query": "Rua Arquitecto Rey Pedreira 9, A Coruna, Spain",
+    "match": "9, Rúa Arquitecto Rey Pedreira, A Coruña, Galicia"
+  },
+  {
+    "id": "055",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle san Amaro hay una bolsa con calzado 36",
+    "fecha": "2026-09-07",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1712949133578723/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle san Amaro hay una bolsa con calzado 36",
+    "imagen": [],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3823842,
+    "lng": -8.3968808,
+    "precision": "street",
+    "query": "Rua San Amaro, A Coruna, Spain",
+    "match": "Rúa Agra de Santo Amaro, A Coruña, Galicia"
+  },
+  {
+    "id": "056",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Sol con Paseo Marítimo.\nParece que o problema son os repousabrazos.",
+    "fecha": "2026-09-07",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1712783270261976/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Sol con Paseo Marítimo.\nParece que o problema son os repousabrazos.",
+    "imagen": [
+      "data/images/056-1.jpg",
+      "data/images/056-2.jpg",
+      "data/images/056-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": null,
+    "lng": null,
+    "precision": null,
+    "reason": "Rua do Sol resolved to Muros, a different town, not confidently A Coruna."
+  },
+  {
+    "id": "057",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "En calle Costa Rica, ropa de niños",
+    "fecha": "2026-09-06",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1712492516957718/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "En calle Costa Rica, ropa de niños",
+    "imagen": [
+      "data/images/057-1.jpg",
+      "data/images/057-2.jpg",
+      "data/images/057-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": null,
+    "lng": null,
+    "precision": null,
+    "reason": "Calle Costa Rica resolved to Xabia/Javea, Comunitat Valenciana, a different region entirely."
+  },
+  {
+    "id": "058",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Maleta escolar  las ruedas estan bien\nFrente a Rúa Torrente Ballester 2",
+    "fecha": "2026-09-06",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1712360946970875/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Maleta escolar  las ruedas estan bien\nFrente a Rúa Torrente Ballester 2",
+    "imagen": [
+      "data/images/058.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3734753,
+    "lng": -8.4231711,
+    "precision": "address",
+    "query": "Rua Torrente Ballester 2, A Coruna, Spain",
+    "match": "2, Rúa Torrente Ballester, A Coruña, Galicia"
+  },
+  {
+    "id": "059",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "En Calle Mondoñedo. Está en bon estado e hasta ten pilas.",
+    "fecha": "2026-09-06",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1712349876971982/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "En Calle Mondoñedo. Está en bon estado e hasta ten pilas.",
+    "imagen": [
+      "data/images/059.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3752828,
+    "lng": -8.3972129,
+    "precision": "street",
+    "query": "Rua Mondonedo, A Coruna, Spain",
+    "match": "Rúa Mondoñedo, A Coruña, Galicia"
+  },
+  {
+    "id": "060",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle Sofía Casanova cruce Ramón Cabanillas .sombreros",
+    "fecha": "2026-09-06",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1712338860306417/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle Sofía Casanova cruce Ramón Cabanillas .sombreros",
+    "imagen": [
+      "data/images/060.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3569594,
+    "lng": -8.4120055,
+    "precision": "street",
+    "query": "Rua Sofia Casanova, A Coruna, Spain",
+    "match": "Rúa Sofía Casanova, A Coruña, Galicia"
+  },
+  {
+    "id": "061",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Rúa Mantelería",
+    "fecha": "2026-09-06",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1712336863639950/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Rúa Mantelería",
+    "imagen": [
+      "data/images/061.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null,
+    "lat": 43.3692075,
+    "lng": -8.4034283,
+    "precision": "street",
+    "query": "Rúa Mantelería, A Coruna, Spain",
+    "match": "Rúa Mantelería, A Coruña, Galicia"
+  },
+  {
+    "id": "062",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Travesía Angela Blanco De Soto Número 2",
+    "fecha": "2026-09-06",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1712290893644547/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Travesía Angela Blanco De Soto Número 2",
+    "imagen": [
+      "data/images/062-1.jpg",
+      "data/images/062-2.jpg",
+      "data/images/062-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3510913,
+    "lng": -8.391801,
+    "precision": "address",
+    "query": "Travesía Angela Blanco De Soto Número 2, A Coruna, Spain",
+    "match": "2, Travesía Ángela Blanco de Soto, A Coruña, Galicia"
+  },
+  {
+    "id": "063",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "En acea da ama, los contenedores que quedan enfrente del bar la tortuga, cerca de la entrada de coches de la laboral, parecía en buen estado",
+    "fecha": "2026-09-06",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1712132096993760/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "En acea da ama, los contenedores que quedan enfrente del bar la tortuga, cerca de la entrada de coches de la laboral, parecía en buen estado",
+    "imagen": [
+      "data/images/063.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": null,
+    "lng": null,
+    "precision": null,
+    "reason": "Acea da Ama resolved to O Burgo, but the post ties the location to 'a laboral' (Universidade Laboral, A Coruna city), a different place than the O Burgo match."
+  },
+  {
+    "id": "064",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Travesia de Arteixo,ao carón do Yedi.Arteixo.",
+    "fecha": "2026-09-06",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1712020430338260/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Travesia de Arteixo,ao carón do Yedi.Arteixo.",
+    "imagen": [
+      "data/images/064.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3153323,
+    "lng": -8.4924025,
+    "precision": "street",
+    "query": "Travesia de Arteixo, Arteixo, Spain",
+    "match": "Travesía de Arteixo, Arteixo, Galicia"
+  },
+  {
+    "id": "065",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Ya no está!\nSupermercado de juguete. Está completo. Lo acabo de dejar en los contenedores de la recta de Guísamo (Bergondo) donde la carnicería.",
+    "fecha": "2026-09-06",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1711997160340587/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Ya no está!\nSupermercado de juguete. Está completo. Lo acabo de dejar en los contenedores de la recta de Guísamo (Bergondo) donde la carnicería.",
+    "imagen": [
+      "data/images/065.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.2996331,
+    "lng": -8.2738274,
+    "precision": "landmark",
+    "query": "Guisamo, Bergondo, Spain",
+    "match": "Guísamo, Bergondo, Galicia"
+  },
+  {
+    "id": "066",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Buenos días. Ronda d Outeiro 312.",
+    "fecha": "2026-09-06",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1711944023679234/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Buenos días. Ronda d Outeiro 312.",
+    "imagen": [
+      "data/images/066.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3664814,
+    "lng": -8.4244252,
+    "precision": "address",
+    "query": "Buenos días. Ronda d Outeiro 312., A Coruna, Spain",
+    "match": "312, Ronda de Outeiro, A Coruña, Galicia"
+  },
+  {
+    "id": "067",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Parece estar en buen estado \nCalle Almirante Mourelle",
+    "fecha": "2026-09-05",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1711567940383509/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Parece estar en buen estado \nCalle Almirante Mourelle",
+    "imagen": [
+      "data/images/067-1.jpg",
+      "data/images/067-2.jpg",
+      "data/images/067-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3659912,
+    "lng": -8.4226237,
+    "precision": "street",
+    "query": "Rua Almirante Mourelle, A Coruna, Spain",
+    "match": "Rúa Almirante Mourelle, A Coruña, Galicia"
+  },
+  {
+    "id": "068",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Ángel Rebollo, 69. A cadeira é moi chula",
+    "fecha": "2026-09-05",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1711435440396759/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Ángel Rebollo, 69. A cadeira é moi chula",
+    "imagen": [
+      "data/images/068-1.jpg",
+      "data/images/068-2.jpg",
+      "data/images/068-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.376821,
+    "lng": -8.4031928,
+    "precision": "address",
+    "query": "Rua Angel Rebollo 69, A Coruna, Spain",
+    "match": "69, Rúa Ángel Rebollo, A Coruña, Galicia"
+  },
+  {
+    "id": "069",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Cadeira de oficina, Maria Luz Morales,  Labañou, funciona ben, so ten o tapizado un pouco gastado",
+    "fecha": "2026-09-05",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1711187960421507/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Cadeira de oficina, Maria Luz Morales,  Labañou, funciona ben, so ten o tapizado un pouco gastado",
+    "imagen": [
+      "data/images/069-1.jpg",
+      "data/images/069-2.jpg",
+      "data/images/069-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3758955,
+    "lng": -8.422948,
+    "precision": "street",
+    "query": "Rua Maria Luz Morales, A Coruna, Spain",
+    "match": "Rúa María Luz Morales, A Coruña, Galicia"
+  },
+  {
+    "id": "070",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Nos soportales do Paseo marítimo do Orzán, diante dun sitio que se chama Kairos.",
+    "fecha": "2026-09-05",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1711060110434292/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Nos soportales do Paseo marítimo do Orzán, diante dun sitio que se chama Kairos.",
+    "imagen": [
+      "data/images/070.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3764217,
+    "lng": -8.4062711,
+    "precision": "landmark",
+    "query": "Paseo Maritimo do Orzan, A Coruna, Spain",
+    "match": "Cúpula do Orzán, Paseo Marítimo, A Coruña, Galicia"
+  },
+  {
+    "id": "071",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Pasadizo do Orzán con paseó marítimo.\nLibros, un par deles infantiles",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710757253797911/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Pasadizo do Orzán con paseó marítimo.\nLibros, un par deles infantiles",
+    "imagen": [
+      "data/images/071.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3764217,
+    "lng": -8.4062711,
+    "precision": "landmark",
+    "query": "Paseo Maritimo do Orzan, A Coruna, Spain",
+    "match": "Cúpula do Orzán, Paseo Marítimo, A Coruña, Galicia"
+  },
+  {
+    "id": "072",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Cambia pañales en C/ Sofía Casanova esquina /c Eugenio Carré,  Os Mallos.",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710756680464635/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Cambia pañales en C/ Sofía Casanova esquina /c Eugenio Carré,  Os Mallos.",
+    "imagen": [
+      "data/images/072.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": "Os Mallos",
+    "lat": 43.355776,
+    "lng": -8.411433,
+    "precision": "neighbourhood"
+  },
+  {
+    "id": "073",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "En  rua José Luis Cereijo, Avda Oza",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710729397134030/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "En  rua José Luis Cereijo, Avda Oza",
+    "imagen": [
+      "data/images/073.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3538035,
+    "lng": -8.3934124,
+    "precision": "street",
+    "query": "Rua Jose Luis Cereijo, A Coruna, Spain",
+    "match": "Rúa Jose Luis Cereijo Santamaría, A Coruña, Galicia"
+  },
+  {
+    "id": "074",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "C/ Agra del Orden n° 11",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710652143808422/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "C/ Agra del Orden n° 11",
+    "imagen": [
+      "data/images/074.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.379608,
+    "lng": -8.402593,
+    "precision": "address",
+    "query": "C/ Agra del Orden n° 11, A Coruna, Spain",
+    "match": "11, Rúa Oriente, A Coruña, Galicia"
+  },
+  {
+    "id": "075",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Rúa Orzán,  n° 87.\nSomier con patas (cama estreita), en moi bo estado.",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710646277142342/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Rúa Orzán,  n° 87.\nSomier con patas (cama estreita), en moi bo estado.",
+    "imagen": [
+      "data/images/075-1.jpg",
+      "data/images/075-2.jpg",
+      "data/images/075-3.jpg",
+      "data/images/075-4.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.370188,
+    "lng": -8.4036264,
+    "precision": "address",
+    "query": "Rua Orzan 87, A Coruna, Spain",
+    "match": "87, Rúa do Orzán, A Coruña, Galicia"
+  },
+  {
+    "id": "076",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Espejo baño 90*80 en la parada de bus de enrique hervada",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710566497150320/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Espejo baño 90*80 en la parada de bus de enrique hervada",
+    "imagen": [
+      "data/images/076.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3574471,
+    "lng": -8.4046128,
+    "precision": "street",
+    "query": "Rua Enrique Hervada, A Coruna, Spain",
+    "match": "Rúa Doutor Enrique Hervada, A Coruña, Galicia"
+  },
+  {
+    "id": "077",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Los Castros, delante de la Iglesia del Carmen",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710557870484516/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Los Castros, delante de la Iglesia del Carmen",
+    "imagen": [
+      "data/images/077-1.jpg",
+      "data/images/077-2.jpg",
+      "data/images/077-3.jpg",
+      "data/images/077-4.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": null,
+    "lng": null,
+    "precision": null,
+    "reason": "Los Castros, a real A Coruna neighbourhood, resolved to Monte dos Castros in Sobrado, an inland town, not a confident match."
+  },
+  {
+    "id": "078",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Federico Tapia, 57. Para gatos",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710451310495172/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Federico Tapia, 57. Para gatos",
+    "imagen": [
+      "data/images/078.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3613116,
+    "lng": -8.4062629,
+    "precision": "address",
+    "query": "Federico Tapia, 57. Para gatos, A Coruna, Spain",
+    "match": "57, Rúa Federico Tapia, A Coruña, Galicia"
+  },
+  {
+    "id": "079",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Acabo de dejarlos fuera en la entrada del colegio Sofía Casanova en Vilaboa- Culleredo. Por si le interesa a alguien.No tienen ruedas ni pedal.",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710438197163150/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Acabo de dejarlos fuera en la entrada del colegio Sofía Casanova en Vilaboa- Culleredo. Por si le interesa a alguien.No tienen ruedas ni pedal.",
+    "imagen": [
+      "data/images/079.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3479849,
+    "lng": -8.4108716,
+    "precision": "landmark",
+    "query": "Colexio Sofia Casanova, Vilaboa, Culleredo, Spain",
+    "match": "Colexio Público Sofía Casanova, Rúa Condes de Andrade, O Burgo, Culleredo, Galicia"
+  },
+  {
+    "id": "080",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Socorro, 10. Base de sombrilla.",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710419317165038/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Socorro, 10. Base de sombrilla.",
+    "imagen": [
+      "data/images/080.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3716692,
+    "lng": -8.4024756,
+    "precision": "address",
+    "query": "Rua Socorro 10, A Coruna, Spain",
+    "match": "10, Rúa do Socorro, A Coruña, Galicia"
+  },
+  {
+    "id": "081",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Avenida de los mallos, 26\nMuchiiiiisimas corbatas en buen estado, yo ya me llevé algunas :)",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710341987172771/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Avenida de los mallos, 26\nMuchiiiiisimas corbatas en buen estado, yo ya me llevé algunas :)",
+    "imagen": [
+      "data/images/081.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": "Os Mallos",
+    "lat": 43.355776,
+    "lng": -8.411433,
+    "precision": "neighbourhood"
+  },
+  {
+    "id": "082",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Ropa hombre, mujer, calzado talla 36 y ropa niño 12 años, en el contenedor de ropa enfrente de la panadería El Birloque",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710268857180084/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Ropa hombre, mujer, calzado talla 36 y ropa niño 12 años, en el contenedor de ropa enfrente de la panadería El Birloque",
+    "imagen": [
+      "data/images/082.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3407033,
+    "lng": -8.4144459,
+    "precision": "landmark",
+    "query": "Panaderia El Birloque, A Coruna, Spain",
+    "match": "Birloque, Rúa Juan Darriba, A Coruña, Galicia"
+  },
+  {
+    "id": "083",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Cambiador de bebé Ronda de Nelle, frente al 126,en los contenedores del semáforo",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710201030520200/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Cambiador de bebé Ronda de Nelle, frente al 126,en los contenedores del semáforo",
+    "imagen": [
+      "data/images/083.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3626425,
+    "lng": -8.4166944,
+    "precision": "address",
+    "query": "Ronda de Nelle 126, A Coruna, Spain",
+    "match": "126, Ronda de Nelle, A Coruña, Galicia"
+  },
+  {
+    "id": "084",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "En juan Neira ,zona monelos",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710194780520825/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "En juan Neira ,zona monelos",
+    "imagen": [
+      "data/images/084.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3497299,
+    "lng": -8.4032511,
+    "precision": "street",
+    "query": "En juan Neira ,zona monelos, A Coruna, Spain",
+    "match": "Rúa Juan Neira, A Coruña, Galicia"
+  },
+  {
+    "id": "085",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Plaza de Lugo al lado del Gadis",
+    "fecha": "2026-09-04",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1710181243855512/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Plaza de Lugo al lado del Gadis",
+    "imagen": [
+      "data/images/085.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3661492,
+    "lng": -8.4065776,
+    "precision": "landmark",
+    "query": "Praza de Lugo, A Coruna, Spain",
+    "match": "Praza de Lugo, A Coruña, Galicia"
+  },
+  {
+    "id": "086",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Tocador antiguo color cerezo en rua Casares Quiroga en contenedores enfrente al nº 50D. Carretera del Gadis a Montrove.\nPara restaurar. Es precioso!\nEn la última foto se ven cuatro armazones de cajón que encontré tirados.",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709895153884121/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Tocador antiguo color cerezo en rua Casares Quiroga en contenedores enfrente al nº 50D. Carretera del Gadis a Montrove.\nPara restaurar. Es precioso!\nEn la última foto se ven cuatro armazones de cajón que encontré tirados.",
+    "imagen": [
+      "data/images/086-1.jpg",
+      "data/images/086-2.jpg",
+      "data/images/086-3.jpg",
+      "data/images/086-4.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3489325,
+    "lng": -8.4092309,
+    "precision": "street",
+    "query": "Rua Casares Quiroga, A Coruna, Spain",
+    "match": "Rúa Casares Quiroga, A Coruña, Galicia"
+  },
+  {
+    "id": "087",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "En perfecto estado el tresillo de madera guapísimo calle Rafael Alberti 33, antes de que venga el punto limpio",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709888930551410/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "En perfecto estado el tresillo de madera guapísimo calle Rafael Alberti 33, antes de que venga el punto limpio",
+    "imagen": [
+      "data/images/087.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3457985,
+    "lng": -8.4075643,
+    "precision": "address",
+    "query": "Rua Rafael Alberti 33, A Coruna, Spain",
+    "match": "33, Rúa Rafael Alberti, A Coruña, Galicia"
+  },
+  {
+    "id": "088",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Rúa San Roque 15 a 23, onde o bazar",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709882507218719/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Rúa San Roque 15 a 23, onde o bazar",
+    "imagen": [
+      "data/images/088-1.jpg",
+      "data/images/088-2.jpg",
+      "data/images/088-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": null,
+    "lng": null,
+    "precision": null,
+    "reason": "Rua San Roque resolved to a same-named street in Santiago de Compostela, not confidently A Coruna."
+  },
+  {
+    "id": "089",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "No metido que está fronte ó Gomes Gaioso, na Rúa Marconi con Mondoñedo.",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709879137219056/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "No metido que está fronte ó Gomes Gaioso, na Rúa Marconi con Mondoñedo.",
+    "imagen": [
+      "data/images/089-1.jpg",
+      "data/images/089-2.jpg",
+      "data/images/089-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3755249,
+    "lng": -8.3971594,
+    "precision": "street",
+    "query": "Rua Marconi, A Coruna, Spain",
+    "match": "Rúa Marconi, A Coruña, Galicia"
+  },
+  {
+    "id": "090",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Parte de arriba plaza Maestro mateo, se ve en buen estado",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709817777225192/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Parte de arriba plaza Maestro mateo, se ve en buen estado",
+    "imagen": [
+      "data/images/090-1.jpg",
+      "data/images/090-2.jpg",
+      "data/images/090-3.jpg",
+      "data/images/090-4.jpg",
+      "data/images/090-5.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3665927,
+    "lng": -8.4114607,
+    "precision": "street",
+    "query": "Praza Mestre Mateo, A Coruna, Spain",
+    "match": "Praza Mestre Mateo, A Coruña, Galicia"
+  },
+  {
+    "id": "091",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "c/Cancela de afuera, esquina con Rda de Nelle..",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709814617225508/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "c/Cancela de afuera, esquina con Rda de Nelle..",
+    "imagen": [
+      "data/images/091.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3607317,
+    "lng": -8.4156639,
+    "precision": "street",
+    "query": "Rua Cancela de Afora, A Coruna, Spain",
+    "match": "Rúa Cancela de Fóra, A Coruña, Galicia"
+  },
+  {
+    "id": "092",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "C/ Almirante Mourelle n° 33.",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709716520568651/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "C/ Almirante Mourelle n° 33.",
+    "imagen": [
+      "data/images/092.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3657757,
+    "lng": -8.4226244,
+    "precision": "address",
+    "query": "C/ Almirante Mourelle n° 33., A Coruna, Spain",
+    "match": "33, Rúa Almirante Mourelle, A Coruña, Galicia"
+  },
+  {
+    "id": "093",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "La Merce 61 en buen estado,bueno ahora que me fijo bien en casa están en la suela algo cascadas🤔, no suelo publicar cosas gastadas...pero nada que tenga solución.",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709685533905083/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "La Merce 61 en buen estado,bueno ahora que me fijo bien en casa están en la suela algo cascadas🤔, no suelo publicar cosas gastadas...pero nada que tenga solución.",
+    "imagen": [
+      "data/images/093-1.jpg",
+      "data/images/093-2.jpg",
+      "data/images/093-3.jpg",
+      "data/images/093-4.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3527269,
+    "lng": -8.392923,
+    "precision": "address",
+    "query": "Rua A Merced 61, A Coruna, Spain",
+    "match": "61, Rúa da Mercede, A Coruña, Galicia"
+  },
+  {
+    "id": "094",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Praza de Fuente Luisa. Fácil arranxo con corda e silicona liquida.",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709665137240456/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Praza de Fuente Luisa. Fácil arranxo con corda e silicona liquida.",
+    "imagen": [
+      "data/images/094.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3720742,
+    "lng": -8.4009686,
+    "precision": "landmark",
+    "query": "Praza Fonte Luisa, A Coruna, Spain",
+    "match": "Praza Fonte Luísa, A Coruña, Galicia"
+  },
+  {
+    "id": "095",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Cidade Vella. Rúa Amargura, contenedores da parte de arriba da rúa. Maleta grande vermella",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709661813907455/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Cidade Vella. Rúa Amargura, contenedores da parte de arriba da rúa. Maleta grande vermella",
+    "imagen": [
+      "data/images/095-1.jpg",
+      "data/images/095-2.jpg",
+      "data/images/095-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.370518,
+    "lng": -8.3939858,
+    "precision": "street",
+    "query": "Rua Amargura, A Coruna, Spain",
+    "match": "Rúa da Amargura, A Coruña, Galicia"
+  },
+  {
+    "id": "096",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Sexo peluchil en Socorro, 10",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709569217250048/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Sexo peluchil en Socorro, 10",
+    "imagen": [
+      "data/images/096-1.jpg",
+      "data/images/096-2.jpg",
+      "data/images/096-3.jpg",
+      "data/images/096-4.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3716692,
+    "lng": -8.4024756,
+    "precision": "address",
+    "query": "Rua Socorro 10, A Coruna, Spain",
+    "match": "10, Rúa do Socorro, A Coruña, Galicia"
+  },
+  {
+    "id": "097",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Ronda de Nelle, a la altura de Peluquería Kaki. Cambiador marca Chicco",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709529953920641/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Ronda de Nelle, a la altura de Peluquería Kaki. Cambiador marca Chicco",
+    "imagen": [
+      "data/images/097.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3597242,
+    "lng": -8.4134431,
+    "precision": "street",
+    "query": "Ronda de Nelle, A Coruna, Spain",
+    "match": "Ronda de Nelle, A Coruña, Galicia"
+  },
+  {
+    "id": "098",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Visto ahora!!! Aparentemente todo en buen estado. Avenida Morro de Canide, casi al final. Oleiros",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709492187257751/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Visto ahora!!! Aparentemente todo en buen estado. Avenida Morro de Canide, casi al final. Oleiros",
+    "imagen": [
+      "data/images/098.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3739529,
+    "lng": -8.3282332,
+    "precision": "landmark",
+    "query": "Avenida Morro do Canide, Oleiros, Spain",
+    "match": "Avenida Morro de Canide, Mera, Oleiros, Galicia"
+  },
+  {
+    "id": "099",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "En Rúa Terranova de Eirís, onde o centro cívico.",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709431347263835/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "En Rúa Terranova de Eirís, onde o centro cívico.",
+    "imagen": [
+      "data/images/099.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.343362,
+    "lng": -8.3959766,
+    "precision": "address",
+    "query": "En Rúa Terranova de Eirís, onde o centro cívico., A Coruna, Spain",
+    "match": "Centro Cívico de Eirís, 7, Rúa Terranova de Eirís, A Coruña, Galicia"
+  },
+  {
+    "id": "100",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Rúa Filipinas fronte ao número 1, xoves 8:45, 3 de setembro.",
+    "fecha": "2026-09-03",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709348210605482/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Rúa Filipinas fronte ao número 1, xoves 8:45, 3 de setembro.",
+    "imagen": [
+      "data/images/100-1.jpg",
+      "data/images/100-2.jpg",
+      "data/images/100-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3518728,
+    "lng": -8.4126579,
+    "precision": "address",
+    "query": "Rua Filipinas 1, A Coruna, Spain",
+    "match": "1, Rúa Filipinas, A Coruña, Galicia"
+  },
+  {
+    "id": "101",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Parque. Infantil. Haora mismo en la avenida Conchiñas",
+    "fecha": "2026-09-02",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709046957302274/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Parque. Infantil. Haora mismo en la avenida Conchiñas",
+    "imagen": [
+      "data/images/101.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3614585,
+    "lng": -8.4199776,
+    "precision": "street",
+    "query": "Avenida das Conchinas, A Coruna, Spain",
+    "match": "Avenida das Conchiñas, A Coruña, Galicia"
+  },
+  {
+    "id": "102",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Vou baixar isto agora ao colector da rúa do Conto esquina con Forcarei. Pechado dá o pego",
+    "fecha": "2026-09-02",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1709010043972632/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Vou baixar isto agora ao colector da rúa do Conto esquina con Forcarei. Pechado dá o pego",
+    "imagen": [
+      "data/images/102-1.jpg",
+      "data/images/102-2.jpg",
+      "data/images/102-3.jpg",
+      "data/images/102-4.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3783312,
+    "lng": -8.4041423,
+    "precision": "street",
+    "query": "Rua do Conto, A Coruna, Spain",
+    "match": "Rúa Conto, A Coruña, Galicia"
+  },
+  {
+    "id": "103",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Sofía Casanova con Carré Aldao. Zona Mallos.",
+    "fecha": "2026-08-31",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1707284857478484/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Sofía Casanova con Carré Aldao. Zona Mallos.",
+    "imagen": [
+      "data/images/103.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": "Os Mallos",
+    "lat": 43.355776,
+    "lng": -8.411433,
+    "precision": "neighbourhood"
+  },
+  {
+    "id": "104",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Ronda de Nelle 96",
+    "fecha": "2026-08-31",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1707141380826165/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Ronda de Nelle 96",
+    "imagen": [
+      "data/images/104.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null,
+    "lat": 43.360709,
+    "lng": -8.4151176,
+    "precision": "address",
+    "query": "Ronda de Nelle 96, A Coruna, Spain",
+    "match": "96, Ronda de Nelle, A Coruña, Galicia"
+  },
+  {
+    "id": "105",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Una mesita que tiene polilla y una silla con el asiento así así... En calle Sofía Casanova con Ramón Cabanillas",
+    "fecha": "2026-08-31",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1707128354160801/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Una mesita que tiene polilla y una silla con el asiento así así... En calle Sofía Casanova con Ramón Cabanillas",
+    "imagen": [
+      "data/images/105-1.jpg",
+      "data/images/105-2.jpg",
+      "data/images/105-3.jpg",
+      "data/images/105-4.jpg",
+      "data/images/105-5.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3569594,
+    "lng": -8.4120055,
+    "precision": "street",
+    "query": "Rua Sofia Casanova, A Coruna, Spain",
+    "match": "Rúa Sofía Casanova, A Coruña, Galicia"
+  },
+  {
+    "id": "106",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle Palomar N26 ,ahora mismo.\nDesconozco si funciona",
+    "fecha": "2026-08-31",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1707111370829166/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle Palomar N26 ,ahora mismo.\nDesconozco si funciona",
+    "imagen": [
+      "data/images/106.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null,
+    "lat": 43.3637674,
+    "lng": -8.412248,
+    "precision": "address",
+    "query": "Rua Palomar 26, A Coruna, Spain",
+    "match": "26, Rúa Palomar, A Coruña, Galicia"
   }
 ]
