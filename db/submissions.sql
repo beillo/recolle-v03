@@ -100,3 +100,57 @@ create policy "Anonymous submission photos may be uploaded"
   for insert
   to anon, authenticated
   with check (bucket_id = 'submission-photos');
+
+-- Added 2026-09-10. Rate limit on the submit path, closing the gap recorded
+-- above, though only partly and it says so.
+--
+-- Postgres cannot see the caller's IP, so this is a global cap plus a duplicate
+-- guard, not a per-visitor limit. It is the crude version deliberately: it
+-- needs no extra service and works with the anon insert grant that already
+-- exists. A real per-visitor limit needs a captcha, Supabase Auth on the submit
+-- path, or an Edge Function in front, and that decision is still open.
+--
+-- SECURITY DEFINER because the inserting role is anon, which has insert and no
+-- select here, so it cannot count anything by itself. EXECUTE is revoked from
+-- the public roles so the function is reachable only through the trigger and
+-- never through /rest/v1/rpc.
+create or replace function public.submissions_throttle()
+returns trigger
+language plpgsql
+security definer
+set search_path = public, pg_temp
+as $$
+declare
+  recientes integer;
+  repetidos integer;
+begin
+  select count(*) into recientes
+  from public.submissions
+  where created_at > now() - interval '1 hour';
+
+  if recientes >= 30 then
+    raise exception 'Demasiados avisos en la ultima hora. Intentalo mas tarde.'
+      using errcode = '54000';
+  end if;
+
+  select count(*) into repetidos
+  from public.submissions
+  where categoria = new.categoria
+    and lower(btrim(localizacion)) = lower(btrim(new.localizacion))
+    and created_at > now() - interval '24 hours';
+
+  if repetidos >= 3 then
+    raise exception 'Ya hay avisos iguales para esta ubicacion en las ultimas 24 horas.'
+      using errcode = '54000';
+  end if;
+
+  return new;
+end;
+$$;
+
+revoke execute on function public.submissions_throttle() from public, anon, authenticated;
+
+drop trigger if exists submissions_throttle_trg on public.submissions;
+create trigger submissions_throttle_trg
+  before insert on public.submissions
+  for each row execute function public.submissions_throttle();
