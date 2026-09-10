@@ -434,7 +434,7 @@ body {
 }
 
 /* Drafted letter */
-.panel-carta textarea,
+.carta-text,
 .panel-form textarea,
 .panel-form input,
 .panel-form select {
@@ -450,18 +450,11 @@ body {
   resize: vertical;
 }
 
-.panel-carta textarea:focus,
+.carta-text:focus,
 .panel-form textarea:focus,
 .panel-form input:focus,
 .panel-form select:focus {
   outline: 1px solid var(--muted);
-}
-
-.panel-carta-foot {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin: 0.5rem 0;
 }
 
 .panel-usage {
@@ -484,21 +477,6 @@ body {
   font-size: 0.74rem;
 }
 
-.panel-sent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.6rem;
-  color: var(--accent);
-}
-
-.panel-sent p {
-  margin: 0;
-  color: var(--light);
-  font-size: 0.78rem;
-  line-height: 1.5;
-}
-
 @media (max-width: 720px) {
   .map-row {
     flex-direction: column;
@@ -510,4 +488,191 @@ body {
     border-left: none;
     border-top: 1px solid var(--ink-line);
   }
+}
+
+/* Form sections, mirroring v0.2's labelled blocks */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.section-label {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Category grid, carried over from v0.2's CategoryGrid */
+.cat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.cat-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  padding: 0.6rem;
+  background: var(--ink-raised);
+  border: 1px solid var(--ink-line);
+  border-radius: 6px;
+  color: var(--muted);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.cat-tile:hover {
+  border-color: var(--muted);
+}
+
+.cat-tile.selected {
+  background: #1a1a1a;
+}
+
+.cat-label {
+  color: var(--light);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.cat-desc {
+  color: var(--muted);
+  font-size: 0.66rem;
+  line-height: 1.35;
+}
+
+/* Success screen after a submission */
+.panel-success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.success-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: var(--ink-raised);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.success-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--light);
+}
+
+.success-sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+
+.success-sub strong {
+  color: var(--light);
+  font-weight: 500;
+}
+
+.summary {
+  width: 100%;
+  background: var(--ink-raised);
+  border: 1px solid var(--ink-line);
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.2rem 0;
+  font-size: 0.75rem;
+}
+
+.summary-key {
+  color: var(--muted);
+}
+
+.summary-val {
+  color: var(--light);
+  text-align: right;
+}
+
+.panel-success .panel-button {
+  width: 100%;
+}
+
+/* Letter modal, following v0.2's overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgb(0 0 0 / 65%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal {
+  width: min(38rem, 100%);
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--ink);
+  border: 1px solid var(--ink-line);
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgb(0 0 0 / 55%);
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.75rem 0.75rem 1rem;
+  border-bottom: 1px solid var(--ink-line);
+}
+
+.modal-eyebrow {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.modal-body {
+  padding: 1rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.carta-text {
+  min-height: 18rem;
+  font-family: inherit;
+}
+
+.modal-foot {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0 1rem 0.5rem;
+}
+
+.modal-note {
+  padding: 0 1rem 0.9rem;
 }
