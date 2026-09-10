@@ -2,7 +2,7 @@
 
 Recolle turns scattered public information about urban waste collection into a geolocalized dataset that is structurally independent from the operator being audited. The core output is a live map of blackspots, container issues, illegal dumping, and reusable items, built without relying on data the operator itself produces.
 
-**Live**: https://app-nu-ruby-47.vercel.app
+**Live**: https://recolle-esp.vercel.app
 
 ## Why this exists
 

@@ -88,6 +88,16 @@ function RecordPopup({ record, onNotify }) {
         </span>
       </div>
 
+      {/* A record whose window expired keeps its point and loses its photo.
+          Without this the popup is silent about it and "never had a photo"
+          looks identical to "had one and it was recycled". */}
+      {record.imagen_reciclada_at && (
+        <p className="popup-recycled">
+          <ImageOff size={ICON.size} strokeWidth={ICON.strokeWidth} /> Foto reciclada el{' '}
+          {new Date(record.imagen_reciclada_at).toLocaleDateString('es-ES')}
+        </p>
+      )}
+
       {record.images.length > 0 && (
         <div className="popup-images">
           {record.images.map((image) =>

@@ -47,6 +47,12 @@ create table public.records (
   match text,
   reason text,
 
+  -- Set when the photo retention window passed and the image files were
+  -- deleted from the repository. Null while the photo still exists, which is
+  -- what separates "never had a photo" from "had one and it was recycled".
+  -- Policy and queue live in db/retention.sql.
+  imagen_reciclada_at timestamptz,
+
   -- Generated from lat/lng rather than written directly, so the two never
   -- drift apart. Backs the 4.7 radius-filtered-by-precision query with
   -- st_dwithin against the gist index below.

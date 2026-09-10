@@ -1,0 +1,366 @@
+{
+  "_meta": {
+    "source": "Concello da Coruna, avisos e incidencias de movilidad",
+    "source_page": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad?argIdioma=es",
+    "fetched_at": "2026-09-07T18:50:03+02:00",
+    "item_count": 8,
+    "status": "REVIEW SAMPLE, not migrated. Not written to data/records.json, db/seed.sql or Supabase.",
+    "schema": "docs/schema.md schema v2",
+    "assumptions": [
+      "severidad = 1 is a fixed default for this source, NOT a judgment read off the page. The page carries no severity signal of any kind.",
+      "id is provisional, assigned from 032 upward for review only. Nothing is reserved in data/records.json.",
+      "confidence = 1.0 as instructed. Note schema v2 defines confidence as confidence in the categoria and localizacion assigned, and here both come from the source rather than from interpretation.",
+      "fuente has two keys, { tipo, url }. Schema v2 documents fuente as three keys { tipo, url, grupo } and does not mark grupo optional, so schema.md needs an entry before this source merges. db/schema.sql already allows it: fuente_grupo is nullable.",
+      "categoria = urban_damage fixed for every item, as instructed. Some items are planned works or a peatonalizacion rather than damage.",
+      "lat, lng and precision come from the source page itself, not from geocoding. precision is set to address when the street string carries a number, else street, to stay inside the check constraint in db/schema.sql."
+    ]
+  },
+  "records": [
+    {
+      "id": "032",
+      "categoria": "urban_damage",
+      "severidad": 1,
+      "localizacion": "Calle Xubias de Abaixo. 15006",
+      "fecha": "2026-03-23",
+      "fuente": {
+        "tipo": "concello",
+        "url": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad/incidencia-de-movilidad/corte-en-xubias-de-abaixo/suceso/1453914684533"
+      },
+      "descripcion": "Corte en Xubias de Abaixo / Transporte / Tráfico",
+      "imagen": [],
+      "confidence": 1.0,
+      "zona": null,
+      "lat": 43.341497,
+      "lng": -8.387411,
+      "precision": "street"
+    },
+    {
+      "id": "033",
+      "categoria": "urban_damage",
+      "severidad": 1,
+      "localizacion": "Calle Sagrada Familia. 15007",
+      "fecha": "2025-06-23",
+      "fuente": {
+        "tipo": "concello",
+        "url": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad/incidencia-de-movilidad/peatonalizacion-de-sagrada-familia-entre-ntra-senora-luz-y-ntra-senora-fatima/suceso/1453896703771"
+      },
+      "descripcion": "Peatonalización de Sagrada Familia (entre Ntra. Señora Luz y Ntra. Señora Fátima) / Transporte / Tráfico",
+      "imagen": [],
+      "confidence": 1.0,
+      "zona": null,
+      "lat": 43.357655,
+      "lng": -8.415513,
+      "precision": "street"
+    },
+    {
+      "id": "034",
+      "categoria": "urban_damage",
+      "severidad": 1,
+      "localizacion": "Avda. Sardiñeira.",
+      "fecha": "2025-05-20",
+      "fuente": {
+        "tipo": "concello",
+        "url": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad/incidencia-de-movilidad/obras-en-avenida-da-sardineira/suceso/1453894066138"
+      },
+      "descripcion": "Obras en Avenida da Sardiñeira / Transporte / Autobuses urbanos",
+      "imagen": [],
+      "confidence": 1.0,
+      "zona": "Os Mallos",
+      "lat": 43.351849,
+      "lng": -8.412201,
+      "precision": "street"
+    },
+    {
+      "id": "035",
+      "categoria": "urban_damage",
+      "severidad": 1,
+      "localizacion": "Calle Payo Gómez. 15004",
+      "fecha": "2025-01-29",
+      "fuente": {
+        "tipo": "concello",
+        "url": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad/incidencia-de-movilidad/peatonalizacion-de-payo-gomez/suceso/1453886429391"
+      },
+      "descripcion": "Peatonalización de Payo Gómez / Transporte / Tráfico",
+      "imagen": [],
+      "confidence": 1.0,
+      "zona": null,
+      "lat": 43.36677,
+      "lng": -8.406861,
+      "precision": "street"
+    },
+    {
+      "id": "036",
+      "categoria": "urban_damage",
+      "severidad": 1,
+      "localizacion": "Calle Casanova de Eirís y calle Bergondo. 15009",
+      "fecha": "2024-06-11",
+      "fuente": {
+        "tipo": "concello",
+        "url": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad/incidencia-de-movilidad/modificacion-de-lineas/suceso/1453869186058"
+      },
+      "descripcion": "Modificación de líneas / Transporte / Autobuses urbanos / Línea 1 / Línea 14 / Línea 12A",
+      "imagen": [],
+      "confidence": 1.0,
+      "zona": null,
+      "lat": 43.34773,
+      "lng": -8.396678,
+      "precision": "street"
+    },
+    {
+      "id": "037",
+      "categoria": "urban_damage",
+      "severidad": 1,
+      "localizacion": "Calle San Andrés y calle Sol.",
+      "fecha": "2024-04-03",
+      "fuente": {
+        "tipo": "concello",
+        "url": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad/incidencia-de-movilidad/modificacion-de-lineas/suceso/1453864213522"
+      },
+      "descripcion": "Modificación de líneas / Transporte / Autobuses urbanos",
+      "imagen": [],
+      "confidence": 1.0,
+      "zona": null,
+      "lat": 43.368737,
+      "lng": -8.40458,
+      "precision": "street"
+    },
+    {
+      "id": "038",
+      "categoria": "urban_damage",
+      "severidad": 1,
+      "localizacion": "Calle Eugenio Carré Aldao. 15007",
+      "fecha": "2024-02-01",
+      "fuente": {
+        "tipo": "concello",
+        "url": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad/incidencia-de-movilidad/cambio-de-sentido-de-la-calle-eugenio-carre-aldao-tramo-avda-los-mallos-con-sofia-casanova/suceso/1453858228719"
+      },
+      "descripcion": "Cambio de sentido de la calle Eugenio Carré Aldao, tramo Avda. los Mallos con Sofía Casanova / Transporte / Tráfico",
+      "imagen": [],
+      "confidence": 1.0,
+      "zona": "Os Mallos",
+      "lat": 43.356078,
+      "lng": -8.412149,
+      "precision": "street"
+    },
+    {
+      "id": "039",
+      "categoria": "urban_damage",
+      "severidad": 1,
+      "localizacion": null,
+      "fecha": "2021-05-11",
+      "fuente": {
+        "tipo": "concello",
+        "url": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad/incidencia-de-movilidad/limitacion-de-velocidad-a-30-km-h/suceso/1453761620263"
+      },
+      "descripcion": "Limitación de velocidad a 30 km/h / Transporte / Tráfico",
+      "imagen": [],
+      "confidence": 1.0,
+      "zona": null,
+      "lat": null,
+      "lng": null,
+      "precision": null
+    }
+  ],
+  "_review": [
+    {
+      "id": "032",
+      "source_item_id": "1453914684533",
+      "source_page": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad?argIdioma=es",
+      "date_range_text": "Desde el 23/03/2026 hasta el 23/09/2026",
+      "fecha_fin_has_no_schema_field": "2026-09-23",
+      "entradilla_not_carried_into_descripcion": "Corte de calzada.",
+      "source_coord": {
+        "lat": 43.341497,
+        "lng": -8.387411,
+        "in_a_coruna_bounds": true
+      },
+      "photon_fallback": {
+        "query": "Calle Xubias de Abaixo, A Coruna, Spain",
+        "error": null,
+        "match": "As Xuvias de Abaixo, A Coruña",
+        "city": "A Coruña",
+        "district": "Oza",
+        "lat": 43.3426813,
+        "lng": -8.3868635,
+        "in_a_coruna_bounds": true,
+        "drift_from_source_metres": 139
+      },
+      "zona_decision": "district 'Oza' is not in the confirmed zona list, zona left null"
+    },
+    {
+      "id": "033",
+      "source_item_id": "1453896703771",
+      "source_page": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad?argIdioma=es",
+      "date_range_text": "Desde el 23/06/2025",
+      "fecha_fin_has_no_schema_field": "2051-01-01",
+      "entradilla_not_carried_into_descripcion": "A partir de las 09:00 del día 23 queda peatonal la calle Sagrada Familia (entre Ntra. Señora Luz y Ntra. Señora Fátima).",
+      "source_coord": {
+        "lat": 43.357655,
+        "lng": -8.415513,
+        "in_a_coruna_bounds": true
+      },
+      "photon_fallback": {
+        "query": "Calle Sagrada Familia, A Coruna, Spain",
+        "error": null,
+        "match": "Rúa Alberto Datas Panero, A Coruña",
+        "city": "A Coruña",
+        "district": "Sagrada Familia",
+        "lat": 43.3567972,
+        "lng": -8.4148634,
+        "in_a_coruna_bounds": true,
+        "drift_from_source_metres": 109
+      },
+      "zona_decision": "district 'Sagrada Familia' is not in the confirmed zona list, zona left null"
+    },
+    {
+      "id": "034",
+      "source_item_id": "1453894066138",
+      "source_page": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad?argIdioma=es",
+      "date_range_text": "Desde el 20/05/2025",
+      "fecha_fin_has_no_schema_field": "2051-01-01",
+      "entradilla_not_carried_into_descripcion": "Desde el martes 20 de mayo, a partir de las 09:30 horas, se corta al tráfico la Avda. da Sardiñeira debido a obras de saneamiento.",
+      "source_coord": {
+        "lat": 43.351849,
+        "lng": -8.412201,
+        "in_a_coruna_bounds": true
+      },
+      "photon_fallback": {
+        "query": "Avda. Sardiñeira, A Coruna, Spain",
+        "error": null,
+        "match": "Sardiñeira-Intermodal, Avenida da Sardiñeira, A Coruña",
+        "city": "A Coruña",
+        "district": "Os Mallos",
+        "lat": 43.35244,
+        "lng": -8.4113364,
+        "in_a_coruna_bounds": true,
+        "drift_from_source_metres": 96
+      },
+      "zona_decision": "district 'Os Mallos' is a confirmed zona in docs/schema.md"
+    },
+    {
+      "id": "035",
+      "source_item_id": "1453886429391",
+      "source_page": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad?argIdioma=es",
+      "date_range_text": "Desde el 29/01/2025",
+      "fecha_fin_has_no_schema_field": "2051-01-01",
+      "entradilla_not_carried_into_descripcion": "A partir de las 09:00 del día 29 queda peatonal la calle Payo Gómez desde la intersección con Fonseca.",
+      "source_coord": {
+        "lat": 43.36677,
+        "lng": -8.406861,
+        "in_a_coruna_bounds": true
+      },
+      "photon_fallback": {
+        "query": "Calle Payo Gómez, A Coruna, Spain",
+        "error": null,
+        "match": "Rúa Payo Gómez, A Coruña",
+        "city": "A Coruña",
+        "district": "O Ensanche",
+        "lat": 43.3675688,
+        "lng": -8.4074721,
+        "in_a_coruna_bounds": true,
+        "drift_from_source_metres": 102
+      },
+      "zona_decision": "district 'O Ensanche' is not in the confirmed zona list, zona left null"
+    },
+    {
+      "id": "036",
+      "source_item_id": "1453869186058",
+      "source_page": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad?argIdioma=es",
+      "date_range_text": "Desde el 11/06/2024",
+      "fecha_fin_has_no_schema_field": "2051-01-01",
+      "entradilla_not_carried_into_descripcion": "Por obras en el cruce de las calles Casanova de Eirís y calle Bergondo.",
+      "source_coord": {
+        "lat": 43.34773,
+        "lng": -8.396678,
+        "in_a_coruna_bounds": true
+      },
+      "photon_fallback": {
+        "query": "Calle Casanova de Eirís y calle Bergondo, A Coruna, Spain",
+        "error": null,
+        "match": "Rúa Castrillón, A Coruña",
+        "city": "A Coruña",
+        "district": "O Castrillón",
+        "lat": 43.3499558,
+        "lng": -8.3969885,
+        "in_a_coruna_bounds": true,
+        "drift_from_source_metres": 249
+      },
+      "zona_decision": "district 'O Castrillón' is not in the confirmed zona list, zona left null"
+    },
+    {
+      "id": "037",
+      "source_item_id": "1453864213522",
+      "source_page": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad?argIdioma=es",
+      "date_range_text": "Desde el 03/04/2024",
+      "fecha_fin_has_no_schema_field": "2051-01-01",
+      "entradilla_not_carried_into_descripcion": "Por reurbanización de San Andrés y calle Sol.",
+      "source_coord": {
+        "lat": 43.368737,
+        "lng": -8.40458,
+        "in_a_coruna_bounds": true
+      },
+      "photon_fallback": {
+        "query": "Calle San Andrés y calle Sol, A Coruna, Spain",
+        "error": null,
+        "match": "Rúa Calderón de la Barca, Arteixo",
+        "city": "Arteixo",
+        "district": "Urbanización Sol y Mar",
+        "lat": 43.3256681,
+        "lng": -8.4802586,
+        "in_a_coruna_bounds": true,
+        "drift_from_source_metres": 7771
+      },
+      "zona_decision": "district 'Urbanización Sol y Mar' is not in the confirmed zona list, zona left null"
+    },
+    {
+      "id": "038",
+      "source_item_id": "1453858228719",
+      "source_page": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad?argIdioma=es",
+      "date_range_text": "Desde el 01/02/2024",
+      "fecha_fin_has_no_schema_field": "2051-01-01",
+      "entradilla_not_carried_into_descripcion": "Desde el jueves 1 de febrero, cambio de sentido de la c/ Eugenio Carré Aldao, tramo Avda. los Mallos con Sofía Casanova.",
+      "source_coord": {
+        "lat": 43.356078,
+        "lng": -8.412149,
+        "in_a_coruna_bounds": true
+      },
+      "photon_fallback": {
+        "query": "Calle Eugenio Carré Aldao, A Coruna, Spain",
+        "error": null,
+        "match": "Rúa Eugenio Carré Aldao, A Coruña",
+        "city": "A Coruña",
+        "district": "Os Mallos",
+        "lat": 43.3556276,
+        "lng": -8.4111871,
+        "in_a_coruna_bounds": true,
+        "drift_from_source_metres": 93
+      },
+      "zona_decision": "district 'Os Mallos' is a confirmed zona in docs/schema.md"
+    },
+    {
+      "id": "039",
+      "source_item_id": "1453761620263",
+      "source_page": "https://www.coruna.gal/web/es/actualidad/avisos-e-incidencias/avisos-movilidad?argIdioma=es",
+      "date_range_text": "Desde el 11/05/2021",
+      "fecha_fin_has_no_schema_field": "2051-01-01",
+      "entradilla_not_carried_into_descripcion": "A partir del 11 de Mayo, en vías urbanas de un solo carril para cada sentido de circulación.",
+      "source_coord": {
+        "lat": null,
+        "lng": null,
+        "in_a_coruna_bounds": false
+      },
+      "photon_fallback": {
+        "query": ", A Coruna, Spain",
+        "error": null,
+        "match": "A Coruña",
+        "city": null,
+        "district": null,
+        "lat": 43.3466447,
+        "lng": -8.4127029,
+        "in_a_coruna_bounds": true,
+        "drift_from_source_metres": null
+      },
+      "zona_decision": "Photon returned no district for this address, zona left null"
+    }
+  ]
+}
