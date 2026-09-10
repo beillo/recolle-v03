@@ -158,45 +158,6 @@ body {
   position: relative;
 }
 
-/* Zona panel: plain text overlay backing the records_by_zona() RPC,
-   Etapa 4.7's "count grouped by zona" query. */
-.zona-panel {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  z-index: 1000;
-  background: var(--ink-raised);
-  border: 1px solid var(--ink-line);
-  border-radius: 6px;
-  padding: 0.6rem 0.9rem;
-  font-size: 0.75rem;
-  min-width: 10rem;
-}
-
-.zona-panel-title {
-  display: block;
-  color: var(--muted);
-  margin-bottom: 0.4rem;
-}
-
-.zona-panel ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.zona-panel li {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding: 0.15rem 0;
-}
-
-.zona-panel li strong {
-  color: var(--light);
-  font-weight: 500;
-}
-
 .leaflet-container {
   height: 100%;
   width: 100%;
@@ -286,18 +247,4 @@ body {
   font-size: 0.72rem;
   color: var(--muted);
   font-style: italic;
-}
-
-.popup-source {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  margin-top: 0.7rem;
-  font-size: 0.72rem;
-  color: var(--muted);
-  text-decoration: none;
-}
-
-.popup-source:hover {
-  color: var(--light);
 }

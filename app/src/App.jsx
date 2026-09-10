@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet'
-import { MapPin, Calendar, ImageOff, ExternalLink, Crosshair } from 'lucide-react'
+import { MapPin, Calendar, ImageOff, Crosshair } from 'lucide-react'
 import 'leaflet/dist/leaflet.css'
 
-import { loadRecords, loadZonaCounts } from './data/records.js'
+import { loadRecords } from './data/records.js'
 
 const ICON = { size: 13, strokeWidth: 1.75 }
 
@@ -66,22 +66,6 @@ function Legend({ plotted }) {
   )
 }
 
-function ZonaPanel({ counts }) {
-  return (
-    <div className="zona-panel">
-      <span className="zona-panel-title">Records by zona</span>
-      <ul>
-        {counts.map(({ zona, count }) => (
-          <li key={zona ?? 'none'}>
-            <span>{zona ?? 'sin zona confirmada'}</span>
-            <strong>{count}</strong>
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
-}
-
 function RecordPopup({ record }) {
   const colour = MARKER_COLOURS[record.categoria] || FALLBACK_COLOUR
   return (
@@ -137,24 +121,12 @@ function RecordPopup({ record }) {
         </div>
       )}
 
-      {record.fuente?.url && (
-        <a
-          className="popup-source"
-          href={record.fuente.url}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <ExternalLink size={ICON.size} strokeWidth={ICON.strokeWidth} />
-          Original post
-        </a>
-      )}
     </Popup>
   )
 }
 
 export default function App() {
   const [records, setRecords] = useState(null)
-  const [zonaCounts, setZonaCounts] = useState(null)
   const [loadError, setLoadError] = useState(null)
 
   useEffect(() => {
@@ -181,14 +153,6 @@ export default function App() {
         }
       })
       .catch((err) => setLoadError(err.message))
-
-    loadZonaCounts()
-      .then((counts) => {
-        setZonaCounts(counts)
-        console.log('[recolle] records_by_zona:')
-        console.table(counts)
-      })
-      .catch((err) => console.error('[recolle] records_by_zona failed:', err.message))
   }, [])
 
   if (loadError) {
@@ -226,7 +190,6 @@ export default function App() {
       <Legend plotted={plotted} />
 
       <div className="map-wrap">
-        {zonaCounts && <ZonaPanel counts={zonaCounts} />}
         <MapContainer center={A_CORUNA} zoom={13} scrollWheelZoom>
           {/*
             Esri Light Gray, replacing CartoDB Positron. Carto now stamps

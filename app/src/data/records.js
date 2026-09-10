@@ -40,6 +40,10 @@ function sourceFromPrecision(precision) {
   return precision === 'neighbourhood' ? 'zona' : 'localizacion'
 }
 
+// Binding for the records_by_zona() RPC, Etapa 4.7's "count records grouped by
+// zona" query from docs/queries.md. Nothing renders it since the zona panel was
+// taken off the map, but the query is a stage deliverable and the function
+// stays as its client side entry point. Delete it only if 4.7 is rescoped.
 export async function loadZonaCounts() {
   const { data, error } = await supabase.rpc('records_by_zona')
   if (error) throw error
