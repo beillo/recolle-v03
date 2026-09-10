@@ -826,3 +826,24 @@ body {
   flex: 1;
   min-width: 0;
 }
+
+/* Letter trigger inside a marker popup */
+.popup-notify {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.7rem;
+  padding: 0.4rem 0.6rem;
+  background: none;
+  color: var(--muted);
+  border: 1px solid var(--ink-line);
+  border-radius: 5px;
+  font: inherit;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.popup-notify:hover {
+  color: var(--light);
+  border-color: var(--muted);
+}

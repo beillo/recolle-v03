@@ -33,11 +33,22 @@ function spread(lat, lng, index, total) {
   return { lat: lat + dLat, lng: lng + dLng }
 }
 
-// precision "neighbourhood" only ever comes from a confirmed zona centroid,
-// see db/seed.sql and the locate() logic it replaced, so it is what "source"
-// used to encode: zona if neighbourhood, geocoded localizacion otherwise.
-function sourceFromPrecision(precision) {
-  return precision === 'neighbourhood' ? 'zona' : 'localizacion'
+// How the coordinate on a row was actually obtained. Three cases, not two.
+//
+// The old version read only `precision` and sent everything that was not
+// "neighbourhood" to "localizacion". That mislabelled the Concello records:
+// that source publishes its own latitude and longitude in the page markup, so
+// no geocoding ever runs on them, yet they were drawn with the dashed ring
+// that the legend calls "ubicado desde la localización, menor precisión". The
+// map was making a false claim about the provenance of those coordinates.
+//
+// `query` is the exact discriminator. It holds the string sent to Photon and
+// is null on every row that never went through geocoding, so it separates a
+// geocoded guess from a coordinate the source itself published.
+function sourceOf(row) {
+  if (row.precision === 'neighbourhood') return 'zona'
+  if (row.query) return 'localizacion'
+  return 'fuente'
 }
 
 // Binding for the records_by_zona() RPC, Etapa 4.7's "count records grouped by
@@ -66,7 +77,7 @@ export async function loadRecords() {
       ...row,
       fuente: { tipo: row.fuente_tipo, url: row.fuente_url, grupo: row.fuente_grupo },
       images: (row.imagen || []).map((path) => ({ path, url: imageUrls[path] })),
-      source: sourceFromPrecision(row.precision),
+      source: sourceOf(row),
       groupKey: `${row.lat},${row.lng}`,
     })
   }

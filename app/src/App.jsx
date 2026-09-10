@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet'
-import { MapPin, Calendar, ImageOff, Crosshair } from 'lucide-react'
+import { MapPin, Calendar, ImageOff, Crosshair, FileText } from 'lucide-react'
 import 'leaflet/dist/leaflet.css'
 
 import { loadRecords } from './data/records.js'
 import ReportSidebar from './components/ReportSidebar.jsx'
+import CartaModal from './components/CartaModal.jsx'
+import { useCarta } from './lib/useCarta.js'
 import {
   CATEGORY_LABELS,
   MARKER_COLOURS,
@@ -39,7 +41,7 @@ function Legend({ plotted }) {
       <span className="legend-item precision-key">
         <span className="swatch hollow" />
         <span style={{ color: 'var(--muted)' }}>
-          Trazo discontinuo: ubicado desde la localización, menor precisión
+          Trazo discontinuo: coordenada deducida por geocodificación
         </span>
       </span>
       <span className="note">
@@ -49,7 +51,7 @@ function Legend({ plotted }) {
   )
 }
 
-function RecordPopup({ record }) {
+function RecordPopup({ record, onNotify }) {
   const colour = MARKER_COLOURS[record.categoria] || FALLBACK_COLOUR
   return (
     <Popup>
@@ -78,8 +80,10 @@ function RecordPopup({ record }) {
           <Crosshair size={ICON.size} strokeWidth={ICON.strokeWidth} />
           <span>
             {record.source === 'zona'
-              ? `Zona confirmada, centro del barrio`
-              : `Geocodificado desde la localización (${record.precision}): ${record.match}`}
+              ? 'Centroide del barrio, sin punto exacto'
+              : record.source === 'fuente'
+                ? `Coordenada publicada por la fuente (${record.precision})`
+                : `Geocodificado desde la localización (${record.precision}): ${record.match}`}
           </span>
         </span>
       </div>
@@ -104,12 +108,30 @@ function RecordPopup({ record }) {
         </div>
       )}
 
+      <button
+        className="popup-notify"
+        onClick={() =>
+          onNotify({
+            origen: 'record',
+            categoria: record.categoria,
+            severidad: record.severidad,
+            localizacion: record.localizacion,
+            zona: record.zona,
+            fecha: record.fecha,
+            descripcion: record.descripcion,
+          })
+        }
+      >
+        <FileText size={ICON.size} strokeWidth={ICON.strokeWidth} />
+        Notificar al Ayuntamiento
+      </button>
     </Popup>
   )
 }
 
 export default function App() {
   const [records, setRecords] = useState(null)
+  const letter = useCarta()
   const [loadError, setLoadError] = useState(null)
 
   useEffect(() => {
@@ -153,7 +175,6 @@ export default function App() {
         <h1 className="wordmark">
           Recolle<span className="dot">.</span>
         </h1>
-        <span className="stage">Etapa 3 / mapa mínimo</span>
         <div className="counts">
           <span className="count">
             <strong>{plottedByZona.length}</strong> por zona
@@ -196,7 +217,10 @@ export default function App() {
             url="https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
           />
           {plotted.map((record) => {
-            const approximate = record.source !== 'zona'
+            // Dashed means the coordinate was guessed by geocoding. A bairro
+            // centroid and a coordinate the source published are both solid:
+            // neither is a guess, they just sit at different precisions.
+            const approximate = record.source === 'localizacion'
             return (
             <CircleMarker
               key={record.id}
@@ -216,13 +240,20 @@ export default function App() {
                 fillOpacity: approximate ? 0.45 : 0.95,
               }}
             >
-              <RecordPopup record={record} />
+              <RecordPopup record={record} onNotify={letter.ask} />
             </CircleMarker>
             )
           })}
         </MapContainer>
       </div>
       </div>
+
+      <CartaModal
+        {...letter}
+        onGenerate={letter.generate}
+        onClose={letter.close}
+        intro="Este registro ya está en el conjunto de datos verificado. La carta se redacta a partir de él y se firma como el proyecto, no como un vecino."
+      />
     </div>
   )
 }
