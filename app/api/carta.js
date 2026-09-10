@@ -60,6 +60,7 @@ Reglas que no puedes romper:
 - No atribuyas responsabilidad a ninguna persona ni empresa concreta.
 - Si un dato falta, omitelo en silencio. No escribas corchetes ni marcadores de posicion.
 - Entre 110 y 180 palabras.
+- Prosa corrida en parrafos, como una carta en papel. No uses markdown, ni asteriscos, ni negritas, ni vinetas, ni listas de campos con etiquetas. Los datos van integrados en las frases.
 
 ${hecho}
 
