@@ -70,3 +70,33 @@ grant insert (categoria, localizacion, descripcion, lat, lng)
 -- fills. Postgres alone cannot fix that, it needs either a captcha, Supabase
 -- Auth on the submit path, or an Edge Function in front. Revisit before this
 -- is advertised anywhere.
+
+-- Added 2026-09-10 with the photo upload carried over from v0.2.
+alter table public.submissions add column imagen text;
+
+grant insert (categoria, localizacion, descripcion, lat, lng, imagen)
+  on public.submissions to anon, authenticated;
+
+-- Private bucket. 4 MB per file, images only, enforced by Storage itself so a
+-- crafted client cannot talk its way past a check that only lives in the
+-- browser. The browser side check in app/src/data/submissions.js exists to
+-- fail fast with a readable message, not as the control.
+insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+values (
+  'submission-photos',
+  'submission-photos',
+  false,
+  4194304,
+  array['image/jpeg', 'image/png', 'image/webp', 'image/heic']
+)
+on conflict (id) do nothing;
+
+-- Upload only, same shape as the table above: anon may put a file in and can do
+-- nothing else with it. No select policy, so the bucket cannot be listed or
+-- read from a browser, and no update or delete, so an uploaded file cannot be
+-- swapped or removed after the fact. Review reads it with the service role key.
+create policy "Anonymous submission photos may be uploaded"
+  on storage.objects
+  for insert
+  to anon, authenticated
+  with check (bucket_id = 'submission-photos');

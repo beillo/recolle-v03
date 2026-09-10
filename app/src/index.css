@@ -676,3 +676,83 @@ body {
 .modal-note {
   padding: 0 1rem 0.9rem;
 }
+
+/* Photo upload, carried over from v0.2's PhotoUpload */
+.photo-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+  padding: 1rem 0.75rem;
+  background: var(--ink-raised);
+  border: 1px dashed var(--ink-line);
+  border-radius: 6px;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.76rem;
+  cursor: pointer;
+}
+
+.photo-drop:hover {
+  border-color: var(--muted);
+  color: var(--light);
+}
+
+.photo-hint {
+  font-size: 0.66rem;
+  color: var(--muted);
+}
+
+.photo-picked {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem;
+  background: var(--ink-raised);
+  border: 1px solid var(--ink-line);
+  border-radius: 6px;
+}
+
+.photo-picked img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 4px;
+  flex: none;
+}
+
+.photo-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.photo-name {
+  color: var(--light);
+  font-size: 0.74rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.photo-size {
+  color: var(--muted);
+  font-size: 0.66rem;
+}
+
+.photo-remove {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0.3rem;
+  line-height: 0;
+  flex: none;
+}
+
+.photo-remove:hover {
+  color: var(--cat-dumping);
+}

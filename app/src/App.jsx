@@ -32,18 +32,18 @@ function Legend({ plotted }) {
           />
           <span style={{ color: 'var(--muted)' }}>
             {CATEGORY_LABELS[cat]}
-            {present.has(cat) ? '' : ' (none plotted)'}
+            {present.has(cat) ? '' : ' (ninguno)'}
           </span>
         </span>
       ))}
       <span className="legend-item precision-key">
         <span className="swatch hollow" />
         <span style={{ color: 'var(--muted)' }}>
-          Dashed outline: placed from localizacion, lower precision
+          Trazo discontinuo: ubicado desde la localización, menor precisión
         </span>
       </span>
       <span className="note">
-        Records sharing a coordinate are spread apart so they stay clickable.
+        Los registros que comparten coordenada se separan para que sigan siendo clicables.
       </span>
     </div>
   )
@@ -78,8 +78,8 @@ function RecordPopup({ record }) {
           <Crosshair size={ICON.size} strokeWidth={ICON.strokeWidth} />
           <span>
             {record.source === 'zona'
-              ? `Confirmed zona, neighbourhood centre`
-              : `Geocoded from localizacion (${record.precision}): ${record.match}`}
+              ? `Zona confirmada, centro del barrio`
+              : `Geocodificado desde la localización (${record.precision}): ${record.match}`}
           </span>
         </span>
       </div>
@@ -91,13 +91,13 @@ function RecordPopup({ record }) {
               <img
                 key={image.path}
                 src={image.url}
-                alt={`Record ${record.id}`}
+                alt={`Registro ${record.id}`}
                 loading="lazy"
               />
             ) : (
               <span key={image.path} className="popup-missing">
                 <ImageOff size={ICON.size} strokeWidth={ICON.strokeWidth} />{' '}
-                {image.path} not found
+                {image.path} no encontrada
               </span>
             ),
           )}
@@ -142,10 +142,10 @@ export default function App() {
   }, [])
 
   if (loadError) {
-    return <div className="app-message">Failed to load records: {loadError}</div>
+    return <div className="app-message">Error al cargar los registros: {loadError}</div>
   }
   if (!records) {
-    return <div className="app-message">Loading records…</div>
+    return <div className="app-message">Cargando registros…</div>
   }
 
   const { plotted, skipped, totalRecords, plottedByZona, plottedByLocalizacion } = records
@@ -156,28 +156,28 @@ export default function App() {
         <h1 className="wordmark">
           Recolle<span className="dot">.</span>
         </h1>
-        <span className="stage">Etapa 3 / minimal map</span>
+        <span className="stage">Etapa 3 / mapa mínimo</span>
         <div className="counts">
           <span className="count">
-            <strong>{plottedByZona.length}</strong> via zona
+            <strong>{plottedByZona.length}</strong> por zona
           </span>
           <span className="count">
-            <strong>{plottedByLocalizacion.length}</strong> via localizacion
+            <strong>{plottedByLocalizacion.length}</strong> por localización
           </span>
           <span className="count">
-            <strong>{skipped.length}</strong> unplaced
+            <strong>{skipped.length}</strong> sin ubicar
           </span>
           <span className="count">
-            <strong>{totalRecords}</strong> captured
+            <strong>{totalRecords}</strong> registros
           </span>
         </div>
         <button
           className="panel-toggle"
           onClick={() => setPanelOpen((v) => !v)}
-          aria-label={panelOpen ? 'Close side panel' : 'Open side panel'}
+          aria-label={panelOpen ? 'Cerrar panel lateral' : 'Abrir panel lateral'}
         >
           <PanelRight size={15} strokeWidth={ICON.strokeWidth} />
-          {panelOpen ? 'Hide panel' : 'Notify / Report'}
+          {panelOpen ? 'Ocultar panel' : 'Notificar / Reportar'}
         </button>
       </header>
 

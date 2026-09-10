@@ -1,39 +1,39 @@
 // The six values in docs/schema.md schema v2, one place so the map, the legend
 // and the side panel cannot drift apart.
 //
-// Labels and helper text are carried over from v0.2's src/data/categories.js
-// and translated from Spanish, so the two versions describe the same six things
-// the same way. The Spanish wording survives where it matters, in the letter
-// the model drafts, which is addressed to a Spanish institution.
+// Labels and helper text are v0.2's own Spanish, from its
+// src/data/categories.js, restored verbatim on 2026-09-10 when the interface
+// went back to Spanish. The enum keys stay English because they are stored
+// values, checked by a constraint in db/schema.sql, and are not user facing.
 export const CATEGORIES = {
   container_issue: {
-    label: 'Full container',
-    desc: 'Overflowing container, broken lid, or badly placed',
+    label: 'Contenedor lleno',
+    desc: 'Contenedor desbordante, tapa rota o mal colocado',
     icon: 'Trash2',
   },
   illegal_dumping: {
-    label: 'Illegal dumping',
-    desc: 'Waste left in a place not meant for it',
+    label: 'Vertido ilegal',
+    desc: 'Residuos depositados en zona no habilitada',
     icon: 'Ban',
   },
   bulk_waste: {
-    label: 'Bulk waste',
-    desc: 'Furniture, appliances or other large items abandoned',
+    label: 'Residuo voluminoso',
+    desc: 'Muebles, electrodomésticos u objetos grandes abandonados',
     icon: 'Sofa',
   },
   urban_damage: {
-    label: 'Urban damage',
-    desc: 'Graffiti, broken street furniture, potholes, other damage',
+    label: 'Daño urbano',
+    desc: 'Grafitis, mobiliario roto, socavones u otros desperfectos',
     icon: 'ShieldAlert',
   },
   circular_item: {
-    label: 'Item available',
-    desc: 'Item in good condition, left out for reuse',
+    label: 'Objeto disponible',
+    desc: 'Objeto en buen estado disponible para reutilización',
     icon: 'Gift',
   },
   other: {
-    label: 'Other',
-    desc: 'Anything the categories above do not cover',
+    label: 'Otro',
+    desc: 'Incidencia no recogida en las categorías anteriores',
     icon: 'MoreHorizontal',
   },
 }
