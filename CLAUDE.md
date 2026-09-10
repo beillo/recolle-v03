@@ -22,4 +22,4 @@ Every decision that shapes the project, technical or strategic, gets a dated ent
 No em dash in any generated text or documentation. Comma or colon instead.
 
 ## Out of scope for now
-Citizen reporting stays as the legacy v0.2 flow only, never a dependency of this pipeline. Verification report generator, alerts panel, and the scraping engine (Firecrawl) are not built until the stage that calls for them. The beach and sea vertical is a separate, later idea, not part of this build.
+Citizen reporting exists again as of 2026-09-10, as a side panel in the map, and the rule that replaced the old one is narrower but absolute: **the dataset is fed by scraping alone**. A submission lands in `public.submissions`, a quarantine table, never in `public.records`, and nothing moves between them except by human review. Citizen input is not a dependency of the pipeline and must never become one. See the decision entry dated 2026-09-10. Verification report generator, alerts panel, and the scraping engine (Firecrawl) are not built until the stage that calls for them. The beach and sea vertical is a separate, later idea, not part of this build.

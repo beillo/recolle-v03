@@ -1,35 +1,18 @@
 import { useEffect, useState } from 'react'
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet'
-import { MapPin, Calendar, ImageOff, Crosshair } from 'lucide-react'
+import { MapPin, Calendar, ImageOff, Crosshair, PanelRight } from 'lucide-react'
 import 'leaflet/dist/leaflet.css'
 
 import { loadRecords } from './data/records.js'
+import SidePanel from './components/SidePanel.jsx'
+import {
+  CATEGORY_LABELS,
+  MARKER_COLOURS,
+  FALLBACK_COLOUR,
+  PLOTTED_CATEGORIES,
+} from './lib/categories.js'
 
 const ICON = { size: 13, strokeWidth: 1.75 }
-
-const CATEGORY_COLOURS = {
-  circular_item: 'var(--cat-circular)',
-  illegal_dumping: 'var(--cat-dumping)',
-  bulk_waste: 'var(--cat-bulk)',
-  urban_damage: 'var(--cat-damage)',
-}
-
-// Resolved values, since Leaflet paints markers onto a canvas/SVG layer and
-// cannot read the CSS custom properties above.
-const MARKER_COLOURS = {
-  circular_item: '#00c188',
-  illegal_dumping: '#ff5a5f',
-  bulk_waste: '#f5a524',
-  urban_damage: '#3da5f5',
-}
-const FALLBACK_COLOUR = '#8f8f8f'
-
-const CATEGORY_LABELS = {
-  circular_item: 'Circular item',
-  illegal_dumping: 'Illegal dumping',
-  bulk_waste: 'Bulk waste',
-  urban_damage: 'Urban damage',
-}
 
 const A_CORUNA = [43.3623, -8.4115]
 
@@ -37,7 +20,7 @@ function Legend({ plotted }) {
   const present = new Set(plotted.map((r) => r.categoria))
   return (
     <div className="legend">
-      {Object.keys(CATEGORY_COLOURS).map((cat) => (
+      {PLOTTED_CATEGORIES.map((cat) => (
         <span
           key={cat}
           className={`legend-item${present.has(cat) ? '' : ' absent'}`}
@@ -128,6 +111,9 @@ function RecordPopup({ record }) {
 export default function App() {
   const [records, setRecords] = useState(null)
   const [loadError, setLoadError] = useState(null)
+  const [panelOpen, setPanelOpen] = useState(false)
+  const [panelTab, setPanelTab] = useState('notify')
+  const [selected, setSelected] = useState(null)
 
   useEffect(() => {
     loadRecords()
@@ -185,10 +171,19 @@ export default function App() {
             <strong>{totalRecords}</strong> captured
           </span>
         </div>
+        <button
+          className="panel-toggle"
+          onClick={() => setPanelOpen((v) => !v)}
+          aria-label={panelOpen ? 'Close side panel' : 'Open side panel'}
+        >
+          <PanelRight size={15} strokeWidth={ICON.strokeWidth} />
+          {panelOpen ? 'Hide panel' : 'Notify / Report'}
+        </button>
       </header>
 
       <Legend plotted={plotted} />
 
+      <div className="map-row">
       <div className="map-wrap">
         <MapContainer center={A_CORUNA} zoom={13} scrollWheelZoom>
           {/*
@@ -216,6 +211,13 @@ export default function App() {
               key={record.id}
               center={[record.lat, record.lng]}
               radius={9}
+              eventHandlers={{
+                click: () => {
+                  setSelected(record)
+                  setPanelTab('notify')
+                  setPanelOpen(true)
+                },
+              }}
               pathOptions={{
                 // Same colour by categoria either way. Precision is carried by
                 // the outline: solid ring for a confirmed zona, dashed ring and
@@ -235,6 +237,15 @@ export default function App() {
             )
           })}
         </MapContainer>
+      </div>
+
+      <SidePanel
+        open={panelOpen}
+        tab={panelTab}
+        onTab={setPanelTab}
+        onClose={() => setPanelOpen(false)}
+        record={selected}
+      />
       </div>
     </div>
   )

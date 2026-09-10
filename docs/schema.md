@@ -69,3 +69,12 @@ The Concello da Coruna avisos de movilidad source, adopted in Etapa 5, does not 
 - **`fuente` may have two keys, `{ tipo, url }`.** `grupo` is Facebook specific, it names the group a post came from, and a source that is not a group has nothing to put there. The three key form described above is the Facebook case, not a requirement. `db/schema.sql` already allows this, `fuente_grupo` is nullable, no change was needed there.
 - **A source may supply its own coordinate.** The Concello page publishes a latitude and longitude per notice in RDFa meta tags, so `lat`, `lng` and `precision` are read straight from the source and the Photon fallback is not used at all. `precision` is still set, `street` for these records, and `query` and `match` stay null because there is no geocoding provenance to record. The A Coruna envelope check still runs against the supplied coordinate. A coordinate that arrives with the record is not automatically trusted.
 - **`nota`, a new optional key.** Free text carrying a caveat about the source that has nowhere else to live. Used once so far, on record 033, to record that the Concello's `endDate` of 2051-01-01 is a sentinel meaning no end date set, not a real closure date. It exists in `data/records.json` only. There is no `nota` column in `db/schema.sql`, so the same text is carried as a SQL comment in `db/seed.sql`. If it earns a second and third use it should become a real column rather than stay a JSON only field.
+
+### Not part of records: the submissions table
+
+Added 2026-09-10 with the map's side panel. `public.submissions`, defined in `db/submissions.sql`, holds citizen reports. It is deliberately not this schema and deliberately not the same table:
+
+- A record is scraped, human reviewed and audited. A submission is an unverified claim from an anonymous browser. The dataset's whole value is the first thing, so the second one is quarantined.
+- Shared field: `categoria` uses the same six value enum, so a reviewed submission can be promoted without translating anything. `localizacion`, `descripcion`, `lat` and `lng` mean what they mean here.
+- Fields that exist only there: `estado`, one of `pending`, `accepted` or `rejected`, and `promoted_to`, which points at the `records.id` a submission became, if it ever became one.
+- Nothing moves from `submissions` into `records` automatically. Promotion is a human act, and when it happens the record is a normal record with a `fuente` naming the submission.
