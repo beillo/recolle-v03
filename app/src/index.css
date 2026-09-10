@@ -723,3 +723,106 @@ body {
 .ask-foot {
   padding-bottom: 1rem;
 }
+
+/* Address autocomplete, carried over from v0.2's LocationSearch */
+.loc-search {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.loc-search input {
+  width: 100%;
+  background: var(--ink-raised);
+  color: var(--light);
+  border: 1px solid var(--ink-line);
+  border-radius: 6px;
+  padding: 0.55rem 0.65rem;
+  font: inherit;
+  font-size: 0.78rem;
+}
+
+.loc-search input:focus {
+  outline: 1px solid var(--muted);
+}
+
+.loc-geo {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  padding: 0.4rem 0.6rem;
+}
+
+.loc-dropdown {
+  position: absolute;
+  top: 2.6rem;
+  left: 0;
+  right: 0;
+  z-index: 1200;
+  margin: 0;
+  padding: 0.25rem;
+  list-style: none;
+  background: var(--ink-raised);
+  border: 1px solid var(--ink-line);
+  border-radius: 6px;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 50%);
+  max-height: 15rem;
+  overflow-y: auto;
+}
+
+.loc-dropdown li button {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  width: 100%;
+  padding: 0.45rem 0.5rem;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.loc-dropdown li button:hover {
+  background: var(--ink-line);
+}
+
+.loc-empty {
+  padding: 0.5rem;
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
+.loc-label {
+  color: var(--light);
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+
+/* The municipality is its own line. Photon biases by bounding box but does not
+   filter, so a same-named street in a neighbouring concello can come back;
+   showing the city makes that visible instead of silent. */
+.loc-city {
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.loc-confirmed {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.5rem 0.55rem 0.65rem;
+  background: var(--ink-raised);
+  border: 1px solid var(--ink-line);
+  border-radius: 6px;
+  color: var(--muted);
+}
+
+.loc-address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  flex: 1;
+  min-width: 0;
+}

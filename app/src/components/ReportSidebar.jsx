@@ -10,6 +10,7 @@ import {
 import {
   draftCarta, submitReport, ACCEPTED_PHOTO_TYPES, MAX_PHOTO_BYTES,
 } from '../data/submissions.js'
+import LocationSearch from './LocationSearch.jsx'
 
 const ICON = { size: 14, strokeWidth: 1.75 }
 const ICONS = { Trash2, Ban, Sofa, ShieldAlert, Gift, MoreHorizontal }
@@ -198,7 +199,7 @@ function CartaModal({ stage, carta, setCarta, usage, loading, error, onGenerate,
 
 export default function ReportSidebar() {
   const [categoria, setCategoria] = useState(null)
-  const [localizacion, setLocalizacion] = useState('')
+  const [ubicacion, setUbicacion] = useState(null)
   const [descripcion, setDescripcion] = useState('')
   const [photoFile, setPhotoFile] = useState(null)
   const [sending, setSending] = useState(false)
@@ -213,7 +214,7 @@ export default function ReportSidebar() {
   const [cartaLoading, setCartaLoading] = useState(false)
   const [cartaError, setCartaError] = useState(null)
 
-  const canSubmit = categoria !== null && localizacion.trim().length >= 3 && !sending
+  const canSubmit = categoria !== null && ubicacion !== null && !sending
 
   async function handleSubmit(event) {
     event.preventDefault()
@@ -223,8 +224,10 @@ export default function ReportSidebar() {
     try {
       const report = {
         categoria,
-        localizacion: localizacion.trim(),
+        localizacion: ubicacion.address,
         descripcion: descripcion.trim(),
+        lat: ubicacion.lat,
+        lng: ubicacion.lng,
       }
       await submitReport({ ...report, photoFile })
       setSentReport({ ...report, conFoto: Boolean(photoFile) })
@@ -263,7 +266,7 @@ export default function ReportSidebar() {
   function handleReset() {
     setSentReport(null)
     setCategoria(null)
-    setLocalizacion('')
+    setUbicacion(null)
     setDescripcion('')
     setPhotoFile(null)
     setError(null)
@@ -345,15 +348,7 @@ export default function ReportSidebar() {
         <form className="panel-form" onSubmit={handleSubmit}>
           <section className="form-section">
             <span className="section-label">Ubicación</span>
-            <input
-              type="text"
-              value={localizacion}
-              onChange={(e) => setLocalizacion(e.target.value)}
-              placeholder="Calle y número, o una referencia cercana"
-              minLength={3}
-              maxLength={200}
-              required
-            />
+            <LocationSearch value={ubicacion} onSelect={setUbicacion} />
           </section>
 
           <section className="form-section">
