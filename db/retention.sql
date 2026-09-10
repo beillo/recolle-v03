@@ -81,3 +81,13 @@ $$;
 -- can move a photo out of the dataset.
 revoke execute on function public.marcar_fotos_recicladas(text[]) from public, anon, authenticated;
 revoke execute on function public.retencion_dias(text) from public, anon, authenticated;
+
+-- Added after the first real run, which failed with 42501 twice. Creating a
+-- table or a view grants service_role nothing in this project: "automatically
+-- expose new tables" is off, and bypassing row level security is not the same
+-- as holding a table privilege. The public roles are untouched, so the queue
+-- and the policy stay unreadable from a browser.
+grant select on public.fotos_a_reciclar to service_role;
+grant select, insert, update, delete on public.photo_retention_policy to service_role;
+grant execute on function public.marcar_fotos_recicladas(text[]) to service_role;
+grant execute on function public.retencion_dias(text) to service_role;

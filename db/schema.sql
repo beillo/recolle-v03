@@ -87,3 +87,10 @@ create policy "Public read access"
 -- above. Without this grant, PostgREST returns permission denied even
 -- though the policy would allow the row.
 grant select on public.records to anon, authenticated;
+
+-- service_role needs its own grant. This project has "automatically expose new
+-- tables" off, so a newly created table gives service_role nothing, and
+-- bypassing row level security is not the same as holding a privilege. Without
+-- this every admin endpoint and the recycling job answer 42501 permission
+-- denied, which is how it was found.
+grant select, insert, update, delete on public.records to service_role;

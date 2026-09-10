@@ -154,3 +154,7 @@ drop trigger if exists submissions_throttle_trg on public.submissions;
 create trigger submissions_throttle_trg
   before insert on public.submissions
   for each row execute function public.submissions_throttle();
+
+-- Same reason as db/schema.sql: service_role gets no privilege from table
+-- creation in this project, and the admin review queue runs entirely on it.
+grant select, insert, update, delete on public.submissions to service_role;

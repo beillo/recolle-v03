@@ -66,11 +66,16 @@ function safePath(relative) {
   return full
 }
 
+// Everything below runs inside main() so the ordinary paths return instead of
+// calling process.exit. Exiting while fetch keep-alive sockets are still open
+// makes Node abort on Windows with a libuv assertion, printed after the real
+// output, which reads like a crash on a run that actually succeeded.
+async function main() {
 const queue = await rest('fotos_a_reciclar?select=*&order=fecha')
 
 if (queue.length === 0) {
   console.log('Cola vacía, no hay nada que reciclar hoy.')
-  process.exit(0)
+  return
 }
 
 const totalFotos = queue.reduce((n, r) => n + (r.arquivos?.length ?? 0), 0)
@@ -148,3 +153,9 @@ if (fallidos.length > 0) {
 const restantes = await readdir(IMAGES_ROOT).then((f) => f.filter((n) => n.endsWith('.jpg')).length)
 console.log(`Quedan ${restantes} imágenes en data/images.`)
 console.log('Falta commitear los borrados en git.')
+}
+
+await main().catch((err) => {
+  console.error(err.message)
+  process.exitCode = 1
+})
