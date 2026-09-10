@@ -257,67 +257,22 @@ body {
   font-style: italic;
 }
 
-/* Header toggle for the side panel */
-.panel-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-left: 1.25rem;
-  padding: 0.4rem 0.7rem;
-  background: var(--ink-raised);
-  color: var(--light);
-  border: 1px solid var(--ink-line);
-  border-radius: 6px;
-  font: inherit;
-  font-size: 0.76rem;
-  cursor: pointer;
-}
-
-.panel-toggle:hover {
-  border-color: var(--muted);
-}
-
-/* Side panel */
-.side-panel {
-  width: 22rem;
+/* Report sidebar, permanent, on the left, following v0.2's layout */
+.report-sidebar {
+  width: 23rem;
   flex: none;
   display: flex;
   flex-direction: column;
   background: var(--ink);
-  border-left: 1px solid var(--ink-line);
+  border-right: 1px solid var(--ink-line);
   overflow: hidden;
 }
 
-.panel-head {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.6rem 0.5rem 0.9rem;
-  border-bottom: 1px solid var(--ink-line);
-}
-
-.panel-tabs {
-  display: flex;
-  gap: 0.25rem;
-  flex: 1;
-}
-
-.panel-tabs button {
-  padding: 0.35rem 0.7rem;
-  background: none;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  color: var(--muted);
-  font: inherit;
-  font-size: 0.78rem;
-  cursor: pointer;
-}
-
-.panel-tabs button.active {
-  background: var(--ink-raised);
-  border-color: var(--ink-line);
-  color: var(--light);
+.sidebar-title {
+  margin: 0;
+  font-size: 0.95rem;
   font-weight: 500;
+  color: var(--light);
 }
 
 .panel-close {
@@ -482,11 +437,11 @@ body {
     flex-direction: column;
   }
 
-  .side-panel {
+  .report-sidebar {
     width: auto;
     max-height: 55%;
-    border-left: none;
-    border-top: 1px solid var(--ink-line);
+    border-right: none;
+    border-bottom: 1px solid var(--ink-line);
   }
 }
 
@@ -755,4 +710,16 @@ body {
 
 .photo-remove:hover {
   color: var(--cat-dumping);
+}
+
+/* The confirm step of the letter modal */
+.ask-title {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--light);
+}
+
+.ask-foot {
+  padding-bottom: 1rem;
 }

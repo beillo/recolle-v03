@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet'
-import { MapPin, Calendar, ImageOff, Crosshair, PanelRight } from 'lucide-react'
+import { MapPin, Calendar, ImageOff, Crosshair } from 'lucide-react'
 import 'leaflet/dist/leaflet.css'
 
 import { loadRecords } from './data/records.js'
-import SidePanel from './components/SidePanel.jsx'
+import ReportSidebar from './components/ReportSidebar.jsx'
 import {
   CATEGORY_LABELS,
   MARKER_COLOURS,
@@ -111,9 +111,6 @@ function RecordPopup({ record }) {
 export default function App() {
   const [records, setRecords] = useState(null)
   const [loadError, setLoadError] = useState(null)
-  const [panelOpen, setPanelOpen] = useState(false)
-  const [panelTab, setPanelTab] = useState('notify')
-  const [selected, setSelected] = useState(null)
 
   useEffect(() => {
     loadRecords()
@@ -171,19 +168,13 @@ export default function App() {
             <strong>{totalRecords}</strong> registros
           </span>
         </div>
-        <button
-          className="panel-toggle"
-          onClick={() => setPanelOpen((v) => !v)}
-          aria-label={panelOpen ? 'Cerrar panel lateral' : 'Abrir panel lateral'}
-        >
-          <PanelRight size={15} strokeWidth={ICON.strokeWidth} />
-          {panelOpen ? 'Ocultar panel' : 'Notificar / Reportar'}
-        </button>
       </header>
 
       <Legend plotted={plotted} />
 
       <div className="map-row">
+      <ReportSidebar />
+
       <div className="map-wrap">
         <MapContainer center={A_CORUNA} zoom={13} scrollWheelZoom>
           {/*
@@ -211,13 +202,6 @@ export default function App() {
               key={record.id}
               center={[record.lat, record.lng]}
               radius={9}
-              eventHandlers={{
-                click: () => {
-                  setSelected(record)
-                  setPanelTab('notify')
-                  setPanelOpen(true)
-                },
-              }}
               pathOptions={{
                 // Same colour by categoria either way. Precision is carried by
                 // the outline: solid ring for a confirmed zona, dashed ring and
@@ -238,14 +222,6 @@ export default function App() {
           })}
         </MapContainer>
       </div>
-
-      <SidePanel
-        open={panelOpen}
-        tab={panelTab}
-        onTab={setPanelTab}
-        onClose={() => setPanelOpen(false)}
-        record={selected}
-      />
       </div>
     </div>
   )
