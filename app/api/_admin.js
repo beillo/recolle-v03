@@ -29,16 +29,21 @@ export function guard(req, res) {
     })
     return true
   }
+
+  // The caller is authenticated before anything else is reported. Answering
+  // "which environment variable is missing" to an unauthenticated request
+  // hands out a map of the deployment's configuration for free.
+  const sent = req.headers['x-admin-token']
+  if (!safeEqual(String(sent || ''), ADMIN_TOKEN)) {
+    res.status(401).json({ error: 'Token de administración incorrecto.' })
+    return true
+  }
+
   if (!SUPABASE_URL || !SERVICE_KEY) {
     res.status(503).json({
       error: 'SUPABASE_SERVICE_ROLE_KEY no está configurado en este despliegue.',
       missing: 'SUPABASE_SERVICE_ROLE_KEY',
     })
-    return true
-  }
-  const sent = req.headers['x-admin-token']
-  if (!safeEqual(String(sent || ''), ADMIN_TOKEN)) {
-    res.status(401).json({ error: 'Token de administración incorrecto.' })
     return true
   }
   return false
