@@ -10,3 +10,9 @@ Thumbs.db
 
 # Raw scraped exports, contain personal data, never committed
 data/raw/
+
+# Raw newsletter HTML. Public, but bulky and rebuildable from the archive;
+# the extraction in data/eys/issues is what gets committed.
+data/eys/raw/
+
+.vercel

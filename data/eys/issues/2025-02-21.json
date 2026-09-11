@@ -1,0 +1,163 @@
+{
+  "edicion": "2025-02-21",
+  "url": "https://www.eysmunicipales.es/enewsletters/enews-_2025-02-21.html",
+  "capturado_en": "2026-09-11T14:40:21.222Z",
+  "plantilla": "A",
+  "items": [
+    {
+      "titulo": "\"Hemos trabajado intensamente para desplegar el mejor contrato de limpieza de la historia de la ciudad de Barcelona\"",
+      "resumen": "Entrevista a Sonia Frias, gerente de Servicios Urbanos del Ayuntamiento de Barcelona y Carlos Vázquez, director de Servicios de Limpieza y Gestión...",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/hemos-trabajado-intensamente-para-desplegar-el-mejor-contrato-de-limpieza-de-la-historia-de-la-ciudad-de-barcelona"
+    },
+    {
+      "titulo": "Limasam moderniza su flota con 43 nuevos vehículos y mejora sus instalaciones en Los Ruices",
+      "resumen": "La empresa de limpieza de Málaga ha incorporado 43 nuevos vehículos a su flota, incluyendo 30 minihidrolimpiadores y 6 camiones de carga lateral de...",
+      "categoria": "Movilidad",
+      "url": "https://www.eysmunicipales.es/actualidad/limasam-moderniza-su-flota-con-43-nuevos-vehiculos-y-mejora-sus-instalaciones-en-los-ruices"
+    },
+    {
+      "titulo": "¿Por qué el futuro de la jardinería profesional es a batería?",
+      "resumen": "En el cuidado de parques y áreas verdes municipales, optar por herramientas más sostenibles, silenciosas y eficientes ha dejado de ser una opción,...",
+      "categoria": "Infraestructura verde",
+      "url": "https://www.eysmunicipales.es/actualidad/por-que-el-futuro-de-la-jardineria-profesional-es-a-bateria"
+    },
+    {
+      "titulo": "Tecnología para el medio ambiente en las Administraciones Públicas",
+      "resumen": "En la era de la digitalización masiva, la Inteligencia Artificial y las redes interconectadas, MOVISAT se posiciona como un aliado tecnológico indispensable...",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/tecnologia-para-el-medio-ambiente-en-las-administraciones-publicas"
+    },
+    {
+      "titulo": "La digitalización revoluciona la gestión del suelo y la vivienda pública en las ciudades",
+      "resumen": "El uso de tecnologías avanzadas como la inteligencia artificial y plataformas especializadas como Rosmiman® permite optimizar hasta un 30 % los costos...",
+      "categoria": "Urbanismo",
+      "url": "https://www.eysmunicipales.es/actualidad/la-digitalizacion-revoluciona-la-gestion-del-suelo-y-la-vivienda-publica-en-las-ciudades"
+    },
+    {
+      "titulo": "Arrancan las obras de mejora en el río Llobregat para consolidar su espacio fluvial",
+      "resumen": "Las obras, con una inversión de más de 330.000 euros, buscan mejorar la accesibilidad y sostenibilidad de dos tramos en Sant Joan Despí y El...",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/arrancan-las-obras-de-mejora-en-el-rio-llobregat-para-consolidar-su-espacio-fluvial"
+    },
+    {
+      "titulo": "La UE reduce la generación de residuos municipales por segundo año consecutivo",
+      "resumen": "En 2023, la cantidad de residuos municipales generados por persona en la UE disminuyó a 511 kg, 4 kg menos que en 2022 y 23 kg menos que en 2021",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/la-ue-reduce-la-generacion-de-residuos-municipales-por-segundo-ano-consecutivo"
+    },
+    {
+      "titulo": "Ourense convoca un nuevo concurso para el contrato de residuos y limpieza viaria tras la anulación del anterior",
+      "resumen": "La decisión busca agilizar el proceso y garantizar una contratación sin errores, tras la anulación del pliego por parte del Tribunal Administrativo...",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/ourense-convoca-un-nuevo-concurso-para-el-contrato-de-basuras-y-limpieza-viaria-tras-la-anulacion-del-anterior"
+    },
+    {
+      "titulo": "Envac gestionará la recogida neumática de residuos en el Parque de las Naciones de Lisboa durante tres años",
+      "resumen": "Desde su puesta en marcha, el sistema ha transportado 172.000 toneladas de residuos, mejorando la planificación y gestión urbana",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/envac-gestionara-la-recogida-neumatica-de-residuos-en-el-parque-de-las-naciones-de-lisboa-durante-tres-anos"
+    },
+    {
+      "titulo": "LIMANCAR confía en MOVISAT para digitalizar los servicios de residuos y limpieza en Carmona",
+      "resumen": "LIMANCAR usará las soluciones avanzadas EcoMovil y EcoRutas de MOVISAT para gestionar inventarios y optimizar rutas de recogida y limpieza",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/limancar-confia-en-movisat-para-digitalizar-los-servicios-de-residuos-y-limpieza-en-carmona"
+    },
+    {
+      "titulo": "Contelogic revoluciona el compostaje con una solución modular y sostenible para la gestión de residuos orgánicos",
+      "resumen": "La entidad apuesta por la versatilidad, eficiencia y diseño innovador para transformar desechos en recursos, desde el hogar hasta proyectos comunitarios,...",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/contelogic-revoluciona-el-compostaje-con-una-solucion-modular-y-sostenible-para-la-gestion-de-residuos-organicos"
+    },
+    {
+      "titulo": "El Ayuntamiento de Madrid lanza a concurso un sistema inteligente de riego en el parque de la Cuña Verde de Latina",
+      "resumen": "El proyecto busca implementar un sistema de riego telegestionado con sensores de humedad, temperatura y caudalímetros, junto con datos meteorológicos...",
+      "categoria": "Infraestructura verde",
+      "url": "https://www.eysmunicipales.es/actualidad/el-ayuntamiento-de-madrid-lanza-a-concurso-un-sistema-inteligente-de-riego-en-el-parque-de-la-cuna-verde-de-latina"
+    },
+    {
+      "titulo": "El Ayuntamiento de Santander adjudica la redacción de su Plan de Infraestructura Verde",
+      "resumen": "Este proyecto busca reforzar la biodiversidad urbana y mejorar la calidad de vida a través de una planificación estratégica de las zonas verdes...",
+      "categoria": "Infraestructura verde",
+      "url": "https://www.eysmunicipales.es/actualidad/el-ayuntamiento-de-santander-adjudica-la-redaccion-del-plan-de-infraestructura-verde-por-mas-de-150-000-euros"
+    },
+    {
+      "titulo": "Aprobado un nuevo contrato para mejorar los parques infantiles de Sevilla por más de 5,7 millones de euros",
+      "resumen": "El documento contempla grandes mejoras en materia de la limpieza y conservación, así como la instalación de toldos en áreas de juego...",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/aprobado-un-nuevo-contrato-para-mejorar-los-parques-infantiles-de-sevilla-por-mas-de-57-millones-de-euros"
+    },
+    {
+      "titulo": "La Región de Murcia avanza hacia la consolidación de una infraestructura verde para garantizar el equilibrio ecológico",
+      "resumen": "La Estrategia Regional de Infraestructura Verde presenta una visión holística para garantizar la conectividad ecológica y promover soluciones...",
+      "categoria": "Infraestructura verde",
+      "url": "https://www.eysmunicipales.es/actualidad/la-region-de-murcia-avanza-hacia-la-consolidacion-de-una-infraestructura-verde-para-garantizar-la-biodiversidad-y-el-equilibrio-ecologico"
+    },
+    {
+      "titulo": "ICLEI Europa lanza una formación gratuita en Inteligencia Artificial para impulsar la acción climática en ciudades",
+      "resumen": "",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/iclei-europa-lanza-una-formacion-gratuita-en-inteligencia-artificial-para-impulsar-la-accion-climatica-en-ciudades"
+    },
+    {
+      "titulo": "Bilbao impulsa la segunda fase del corredor verde de María Díaz de Haro con un diseño innovador",
+      "resumen": "",
+      "categoria": "Urbanismo",
+      "url": "https://www.eysmunicipales.es/actualidad/bilbao-impulsa-la-segunda-fase-del-corredor-verde-de-maria-diaz-de-haro-con-un-diseno-innovador"
+    },
+    {
+      "titulo": "Finnova participará en el XXIII Congreso ECOPLAYAS 2025 con una masterclass sobre financiación europea",
+      "resumen": "",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/finnova-participara-en-el-xxiii-congreso-ecoplayas-2025-con-una-masterclass-sobre-financiacion-europea"
+    },
+    {
+      "titulo": "Allison Transmission amplía la cobertura de sus transmisiones para vehículos de recogida de residuos en el Reino Unido",
+      "resumen": "",
+      "categoria": "Movilidad",
+      "url": "https://www.eysmunicipales.es/actualidad/allison-transmission-amplia-la-cobertura-de-sus-transmisiones-para-vehiculos-de-recogida-de-residuos-alimentarios-en-el-reino-unido"
+    },
+    {
+      "titulo": "La 4ª edición de los Premios ARQUITECTURA enfatiza la sostenibilidad, innovación y compromiso social",
+      "resumen": "",
+      "categoria": "Urbanismo",
+      "url": "https://www.eysmunicipales.es/actualidad/la-4-edicion-de-los-premios-arquitectura-pone-el-enfasis-sobre-la-sostenibilidad-innovacion-y-compromiso-social"
+    },
+    {
+      "titulo": "Santiago de Compostela impulsa la renaturalización del barrio de Pontepedriña con un presupuesto de 1,9 millones",
+      "resumen": "",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/santiago-de-compostela-impulsa-la-renaturalizacion-del-barrio-de-pontepedrina-con-un-presupuesto-de-19-millones"
+    },
+    {
+      "titulo": "Huelva implantará en marzo la recogida de residuos orgánicos",
+      "resumen": "",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/huelva-implantara-en-marzo-el-nuevo-contenedor-marron-para-la-recogida-de-residuos-organicos"
+    }
+  ],
+  "anunciantes": [
+    "ambilamp-abril",
+    "anclajes-marcelino",
+    "boreal-it",
+    "contelogic",
+    "contenur",
+    "decopolis",
+    "ida",
+    "kress",
+    "moba",
+    "moheda-group",
+    "movisat",
+    "query-consulting",
+    "riversa",
+    "rosmiman",
+    "rototank",
+    "sanimobel",
+    "svat",
+    "tenax",
+    "urban-gravity",
+    "vaporeco",
+    "veolia"
+  ]
+}

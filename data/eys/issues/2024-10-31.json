@@ -1,0 +1,142 @@
+{
+  "edicion": "2024-10-31",
+  "url": "https://www.eysmunicipales.es/enewsletters/enews-_2024-10-31.html",
+  "capturado_en": "2026-09-11T14:40:21.178Z",
+  "plantilla": "A",
+  "items": [
+    {
+      "titulo": "\"La València de los próximos años será una ciudad más verde, inclusiva y resiliente, centrada en la sostenibilidad y la innovación\"",
+      "resumen": "Entrevista a Antonio García Celda, Director General de la Capitalidad Verde Europea de València",
+      "categoria": "Infraestructura verde",
+      "url": "https://www.eysmunicipales.es/actualidad/la-valencia-de-los-proximos-anos-sera-una-ciudad-mas-verde-inclusiva-y-resiliente-centrada-en-la-sostenibilidad-y-la-innovacion"
+    },
+    {
+      "titulo": "Benito Urban celebra la II edición de \"La Cita de Benito\" para debatir sobre el futuro de las ciudades",
+      "resumen": "En esta edición se dieron cita los arquitectos Josep Bohigas y Enric Batlle y la especialista en iluminación María Güell para compartir...",
+      "categoria": "Alumbrado",
+      "url": "https://www.eysmunicipales.es/actualidad/benito-urban-celebra-la-ii-edicion-de-la-cita-de-benito-una-cita-para-debatir-sobre-el-futuro-de-las-ciudades"
+    },
+    {
+      "titulo": "La correcta gestión de los residuos municipales, clave para crear ciudades sostenibles",
+      "resumen": "La solución para cumplir con los objetivos de descarbonización y economía circular exigidos requiere contar con la ayuda y experiencia de socios...",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/la-correcta-gestion-de-los-residuos-municipales-clave-para-crear-ciudades-sostenibles"
+    },
+    {
+      "titulo": "¿Es realmente necesaria una tasa de basuras?",
+      "resumen": "A partir del 10/04/2025 será obligatoria para todos los municipios españoles la implantación de una tasa de basuras por el servicio de recogida,...",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/es-realmente-necesaria-una-tasa-de-basuras"
+    },
+    {
+      "titulo": "Tasa justa en la recogida de residuos: corresponsabilidad y tecnología al servicio de la sostenibilidad",
+      "resumen": "MOBA ha implantado en España múltiples proyectos de tecnología con identificación de usuarios que han permitido a los municipios la aplicación...",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/tasa-justa-en-la-recogida-de-residuos-corresponsabilidad-y-tecnologia-al-servicio-de-la-sostenibilidad"
+    },
+    {
+      "titulo": "La importancia del Facility Management en las nuevas tendencias de urbanismo",
+      "resumen": "El Facility Management ha emergido como un componente clave para garantizar que las infraestructuras urbanas funcionen de manera eficiente y respondan a las exigencias...",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/la-importancia-del-facility-management-en-las-nuevas-tendencias-de-urbanismo"
+    },
+    {
+      "titulo": "Nuevo paquete de ayudas de la Agencia de Residuos de Cataluña para la recogida selectiva de residuos municipales",
+      "resumen": "Con un presupuesto de 9 millones de euros, la subvención se dirige a los entes locales, comercios, servicios, industrias u otras entidades y organismos que...",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/ayudas-de-la-agencia-de-residuos-de-cataluna-al-fomento-de-la-recogida-selectiva-de-residuos-municipales"
+    },
+    {
+      "titulo": "El Ayuntamiento de Elda presenta las novedades del nuevo contrato de limpieza y recogida de residuos",
+      "resumen": "El nuevo servicio se ha redimensionado para dar respuesta a las necesidades actuales de la ciudad, ofreciendo un servicio de calidad más eficiente y centrado...",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/el-ayuntamiento-de-elda-presenta-las-novedades-del-nuevo-contrato-de-limpieza-y-recogida-de-residuos"
+    },
+    {
+      "titulo": "Orihuela presenta su nuevo Plan Local de Residuos para optimizar la recogida y gestión durante los próximos 6 años",
+      "resumen": "El Ayuntamiento invertirá 20 millones de euros en los próximos seis años en nueva maquinaria y ampliará su plantilla en 50 trabajadores,...",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/orihuela-presenta-su-nuevo-plan-local-de-residuos-para-optimizar-la-recogida-y-gestion-durante-los-proximos-6-anos"
+    },
+    {
+      "titulo": "El Ayuntamiento de El Vendrell incrementa el presupuesto de limpieza viaria hasta los 2,3 millones de euros",
+      "resumen": "El nuevo servicio organiza al municipio en sectores, ajustando la frecuencia y tipo de limpieza según la densidad de población, actividad y época...",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/el-ayuntamiento-de-el-vendrell-incrementa-el-presupuesto-de-limpieza-viaria-hasta-los-23-millones-de-euros"
+    },
+    {
+      "titulo": "El ÀMB lanza un nuevo servicio de motos eléctricas compartidas en ocho municipios de Barcelona",
+      "resumen": "El servicio, de regulación metropolitana y gestión privada, alcanzará casi 10,000 motos en la vía pública antes de fin de año,...",
+      "categoria": "Movilidad",
+      "url": "https://www.eysmunicipales.es/actualidad/el-amb-lanza-un-nuevo-servicio-de-motos-electricas-compartidas-en-ocho-municipios"
+    },
+    {
+      "titulo": "La Diputación de Barcelona impulsa un piloto con 13 municipios para promover la sostenibilidad en los mercados",
+      "resumen": "Se busca optimizar la recogida selectiva de residuos en origen dentro del mismo mercado e implementar nuevas tecnologías para mejorar su gestión",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/la-diputacion-de-barcelona-impulsa-una-prueba-piloto-con-trece-municipios-para-promover-la-sostenibilidad-en-mercados-semanales"
+    },
+    {
+      "titulo": "Girona implanta los sistemas de recogida de residuos puerta a puerta y contenedores inteligentes",
+      "resumen": "Girona ha comenzado con la implementación de los nuevos sistemas de recogida de residuos. En mayo se empezó a expandir de forma escalonada el modelo...",
+      "categoria": "Artículos / Reportajes",
+      "url": "https://www.eysmunicipales.es/articulos/girona-implanta-los-sistemas-de-recogida-de-residuos-puerta-a-puerta-y-contenedores-inteligentes"
+    },
+    {
+      "titulo": "La nueva era urbana: construyendo smart cities",
+      "resumen": "Una ciudad en constante evolución, dinámica y adaptable a las necesidades de sus habitantes en tiempo real. Un modelo urbano que integre enfoques innovadores...",
+      "categoria": "Artículos / Reportajes",
+      "url": "https://www.eysmunicipales.es/articulos/la-nueva-era-urbana-construyendo-smart-cities"
+    },
+    {
+      "titulo": "Fallece Rafael Barón, destacado profesional del mundo de la iluminación",
+      "resumen": "",
+      "categoria": "Alumbrado",
+      "url": "https://www.eysmunicipales.es/actualidad/fallece-rafael-baron-destacado-profesional-del-mundo-de-la-iluminacion"
+    },
+    {
+      "titulo": "Nuevo contrato para la limpieza, recogida y gestión de biorresiduos en las entidades locales menores de Vitoria-Gasteiz",
+      "resumen": "",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/nuevo-contrato-para-la-limpieza-recogida-de-residuos-y-gestion-de-biorresiduos-en-las-entidades-locales-menores-de-vitoria-gasteiz"
+    },
+    {
+      "titulo": "Innovación sostenible en mobiliario urbano: el REBNEW como solución al excesivo consumo de productos de plástico",
+      "resumen": "",
+      "categoria": "Medio Ambiente",
+      "url": "https://www.eysmunicipales.es/actualidad/innovacion-sostenible-en-mobiliario-urbano-el-rebnew-como-solucion-al-excesivo-consumo-de-productos-de-plastico"
+    },
+    {
+      "titulo": "Eficiencia energética, ecodiseño y sostenibilidad del alumbrado público en el 7º Transforming Lighting",
+      "resumen": "",
+      "categoria": "Alumbrado",
+      "url": "https://www.eysmunicipales.es/actualidad/la-7-edicion-de-transforming-lighting-abordo-la-eficiencia-energetica-el-ecodiseno-y-la-sostenibilidad-en-el-alumbrado-publico"
+    }
+  ],
+  "anunciantes": [
+    "aco",
+    "ambilamp-abril",
+    "anclajes-marcelino",
+    "boreal-it",
+    "contelogic",
+    "contenur",
+    "decopolis",
+    "drv-sistemas",
+    "fcc",
+    "ida",
+    "kress",
+    "moba",
+    "movisat",
+    "piaggio",
+    "query-consulting",
+    "riversa",
+    "rosmiman",
+    "rototank",
+    "sanimobel",
+    "svat",
+    "tenax",
+    "urban-gravity",
+    "vaporeco",
+    "veolia"
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "revisado_hasta": "2026-09-11",
+  "data_source_id": "collection://bc99489f-c0e2-40ad-95f5-dfc7fbe29ff6",
+  "database_url": "https://app.notion.com/p/77a19262725d47ac98731d29dd0b906f",
+  "insights": [
+    {
+      "notion": "3d806169-fce1-8187-928f-ecb2a7dc1818",
+      "titulo": "A mesma UTE Copasa-Setec levou os dois maiores contratos de resíduos da Galícia",
+      "eje": "Mercado",
+      "recurrencia": 4,
+      "ediciones": [
+        "2026-01-16",
+        "2026-02-13",
+        "2026-02-20",
+        "2026-09-11"
+      ],
+      "fuente": "https://www.eysmunicipales.es/actualidad/ferrol-adjudica-el-nuevo-contrato-de-limpieza-y-recogida-de-residuos-por-mas-de-112-millones-de-euros"
+    },
+    {
+      "notion": "3d806169-fce1-8147-91ed-daefa41ce5c0",
+      "titulo": "Ferrol operou recolha por mais de uma década sem concessão vigente",
+      "eje": "Prova do problema",
+      "recurrencia": 1,
+      "ediciones": [
+        "2026-02-13"
+      ],
+      "fuente": "https://www.eysmunicipales.es/actualidad/ferrol-adjudica-el-nuevo-contrato-de-limpieza-y-recogida-de-residuos-por-mas-de-112-millones-de-euros"
+    },
+    {
+      "notion": "3d806169-fce1-818c-8a3a-dca16a026227",
+      "titulo": "Zonas verdes é o único nicho adjacente com volume de contrato comparável",
+      "eje": "Nicho adjacente",
+      "recurrencia": 56,
+      "ediciones": [
+        "2026-08-21"
+      ],
+      "fuente": "https://www.eysmunicipales.es/actualidad/las-palmas-de-gran-canaria-licita-por-968-millones-el-mayor-contrato-de-mantenimiento-de-zonas-verdes-de-su-historia"
+    },
+    {
+      "notion": "3d806169-fce1-8173-bde8-dca5703c26a5",
+      "titulo": "IA embarcada no caminhão medindo impropios (MAWIS.AI VIEW)",
+      "eje": "Concorrência",
+      "recurrencia": 1,
+      "ediciones": [
+        "2026-08-07"
+      ],
+      "fuente": "https://www.eysmunicipales.es/actualidad/el-papel-de-la-ia-en-la-calidad-del-residuo-el-reto-no-es-recoger-mas-sino-recoger-mejor"
+    },
+    {
+      "notion": "3d806169-fce1-81e2-aeca-d6ce108807a3",
+      "titulo": "Impropios aparece 5 vezes em 7 anos de imprensa do setor",
+      "eje": "Regulação",
+      "recurrencia": 5,
+      "ediciones": [
+        "2026-09-11"
+      ],
+      "fuente": "https://www.eysmunicipales.es/newsletter"
+    },
+    {
+      "notion": "3d806169-fce1-8150-bc3f-d89d700cbb56",
+      "titulo": "Rivas publica % de impropios; meta legal citada é 20% para 2027, não 15%",
+      "eje": "Método",
+      "recurrencia": 1,
+      "ediciones": [
+        "2024-01-26"
+      ],
+      "fuente": "https://www.eysmunicipales.es/actualidad/rivas-vaciamadrid-mejora-lo-estipulado-por-la-legislacion-nacional-para-los-impropios-en-el-contenedor-marron"
+    },
+    {
+      "notion": "3d806169-fce1-81ff-a076-c70d243869e4",
+      "titulo": "Contrato de Ourense levou 4 anos, uma anulação e recurso ao TACRC",
+      "eje": "Mercado",
+      "recurrencia": 5,
+      "ediciones": [
+        "2025-02-21",
+        "2025-09-19",
+        "2026-01-16",
+        "2026-02-20",
+        "2026-09-11"
+      ],
+      "fuente": "https://www.eysmunicipales.es/actualidad/ourense-pone-en-marcha-el-nuevo-contrato-de-recogida-de-residuos-y-limpieza-viaria-con-eco-auriense"
+    },
+    {
+      "notion": "3d806169-fce1-8146-8a5c-f405cf595748",
+      "titulo": "Média nacional publicada de gasto em zonas verdes: 26,8 €/hab/ano",
+      "eje": "Método",
+      "recurrencia": 1,
+      "ediciones": [
+        "2026-08-21"
+      ],
+      "fuente": "https://www.eysmunicipales.es/actualidad/las-palmas-de-gran-canaria-licita-por-968-millones-el-mayor-contrato-de-mantenimiento-de-zonas-verdes-de-su-historia"
+    },
+    {
+      "notion": "3d806169-fce1-8133-ba9b-d3f27fe6886e",
+      "titulo": "MOVISAT domina anúncio e editoria: 171 edições, 100 menções",
+      "eje": "Concorrência",
+      "recurrencia": 171,
+      "ediciones": [
+        "2026-09-11"
+      ],
+      "fuente": "https://www.eysmunicipales.es/newsletter"
+    },
+    {
+      "notion": "3d806169-fce1-81e0-94dc-d4cf654d4a56",
+      "titulo": "ACCIONA consolida Galícia por fora dos resíduos",
+      "eje": "Mercado",
+      "recurrencia": 3,
+      "ediciones": [
+        "2026-03-20",
+        "2026-07-10",
+        "2026-08-07"
+      ],
+      "fuente": "https://www.eysmunicipales.es/actualidad/acciona-renueva-el-mantenimiento-de-3-millones-de-metros-cuadrados-de-zonas-verdes-en-vigo"
+    },
+    {
+      "notion": "3d806169-fce1-81fc-8178-e2f8342c0156",
+      "titulo": "Alumbrado tem contrato mas encolhe: não é nicho",
+      "eje": "Nicho adjacente",
+      "recurrencia": 39,
+      "ediciones": [
+        "2026-09-11"
+      ],
+      "fuente": "https://www.eysmunicipales.es/newsletter"
+    },
+    {
+      "notion": "3d806169-fce1-81ff-9caa-dd37ccb7e443",
+      "titulo": "Tasa e pago por generación: 15 notícias em 7 anos",
+      "eje": "Regulação",
+      "recurrencia": 15,
+      "ediciones": [
+        "2026-09-11"
+      ],
+      "fuente": "https://www.eysmunicipales.es/newsletter"
+    }
+  ],
+  "fuentes": {
+    "https://www.eysmunicipales.es/actualidad/ferrol-adjudica-el-nuevo-contrato-de-limpieza-y-recogida-de-residuos-por-mas-de-112-millones-de-euros": "3d806169-fce1-8147-91ed-daefa41ce5c0",
+    "https://www.eysmunicipales.es/actualidad/las-palmas-de-gran-canaria-licita-por-968-millones-el-mayor-contrato-de-mantenimiento-de-zonas-verdes-de-su-historia": "3d806169-fce1-8146-8a5c-f405cf595748",
+    "https://www.eysmunicipales.es/actualidad/el-papel-de-la-ia-en-la-calidad-del-residuo-el-reto-no-es-recoger-mas-sino-recoger-mejor": "3d806169-fce1-8173-bde8-dca5703c26a5",
+    "https://www.eysmunicipales.es/actualidad/rivas-vaciamadrid-mejora-lo-estipulado-por-la-legislacion-nacional-para-los-impropios-en-el-contenedor-marron": "3d806169-fce1-8150-bc3f-d89d700cbb56",
+    "https://www.eysmunicipales.es/actualidad/ourense-pone-en-marcha-el-nuevo-contrato-de-recogida-de-residuos-y-limpieza-viaria-con-eco-auriense": "3d806169-fce1-81ff-a076-c70d243869e4",
+    "https://www.eysmunicipales.es/actualidad/acciona-renueva-el-mantenimiento-de-3-millones-de-metros-cuadrados-de-zonas-verdes-en-vigo": "3d806169-fce1-81e0-94dc-d4cf654d4a56"
+  }
+}
