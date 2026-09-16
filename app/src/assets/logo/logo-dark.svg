@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 218 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Prancheta1" transform="matrix(1.048172,0,0,1.009975,-8.891037,-19.516968)">
+        <rect x="8.482" y="19.324" width="207.964" height="70.072" style="fill:none;"/>
+        <g transform="matrix(0.954042,0,0,0.990124,8.889382,84.672403)">
+            <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:68px;fill:rgb(17,18,16);">r<tspan x="25.783px 62.921px 100.06px 140.917px 159.129px 177.342px " y="0px 0px 0px 0px 0px 0px ">ecolle</tspan></text>
+        </g>
+        <g transform="matrix(0.954042,0,0,0.990124,-40.353326,15.684739)">
+            <circle cx="211" cy="11" r="7" style="fill:rgb(2,190,130);"/>
+        </g>
+    </g>
+</svg>

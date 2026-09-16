@@ -5,6 +5,8 @@ import {
 } from 'lucide-react'
 
 import { CATEGORY_LABELS } from '../lib/categories.js'
+import logoLight from '../assets/logo/logo-light.svg'
+import logoDark from '../assets/logo/logo-dark.svg'
 
 const ICON = { size: 14, strokeWidth: 1.75 }
 const TOKEN_KEY = 'recolle.admin.token'
@@ -301,7 +303,7 @@ export default function Admin() {
     return (
       <div className="admin-login">
         <form onSubmit={signIn}>
-          <h1 className="wordmark">Recolle<span className="dot">.</span></h1>
+          <img src={logoDark} alt="Recolle" className="logo" />
           <p className="panel-note">Panel de administración</p>
           <input
             type="password"
@@ -320,7 +322,7 @@ export default function Admin() {
   return (
     <div className="admin">
       <header className="header">
-        <h1 className="wordmark">Recolle<span className="dot">.</span></h1>
+        <img src={logoLight} alt="Recolle" className="logo" />
         <span className="admin-badge">Administración</span>
         <div className="counts">
           <a className="admin-link" href="/">Ver el mapa</a>

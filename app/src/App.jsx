@@ -3,6 +3,8 @@ import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet'
 import { MapPin, Calendar, ImageOff, Crosshair, FileText } from 'lucide-react'
 import 'leaflet/dist/leaflet.css'
 
+import logoLight from './assets/logo/logo-light.svg'
+
 import { loadRecords } from './data/records.js'
 import ReportSidebar from './components/ReportSidebar.jsx'
 import CartaModal from './components/CartaModal.jsx'
@@ -182,9 +184,8 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1 className="wordmark">
-          Recolle<span className="dot">.</span>
-        </h1>
+        <img src={logoLight} alt="Recolle" className="logo" />
+        <span className="city-badge">A Coruña</span>
         <div className="counts">
           <span className="count">
             <strong>{plottedByZona.length}</strong> por zona
