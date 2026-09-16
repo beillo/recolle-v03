@@ -208,7 +208,15 @@ export default function App() {
       <ReportSidebar />
 
       <div className="map-wrap">
-        <MapContainer center={A_CORUNA} zoom={13} scrollWheelZoom>
+        {/*
+          maxZoom 16 because that is where Esri Light Gray stops having tiles
+          for A Coruna. From 17 on it answers HTTP 200 with the same 2521 byte
+          "Map data not yet available" placeholder, so the failure is invisible
+          to the console and only shows on screen, the same trap that got Carto
+          removed. Measured, not assumed: z16 is 18 kB of real tile, z17, z18
+          and z19 are byte identical placeholders.
+        */}
+        <MapContainer center={A_CORUNA} zoom={13} maxZoom={16} scrollWheelZoom>
           {/*
             Esri Light Gray, replacing CartoDB Positron. Carto now stamps
             "API KEY REQUIRED" across its public basemap tiles and still
@@ -236,7 +244,11 @@ export default function App() {
             <CircleMarker
               key={record.id}
               center={[record.lat, record.lng]}
-              radius={9}
+              // radius 9 was picked for 79 markers. At 126 the dense streets
+              // of the Agra do Orzan turn into one blob, and the 70 m spread
+              // that separates records sharing a coordinate is only about 5 px
+              // at zoom 13, so it cannot pull them apart on its own.
+              radius={5}
               pathOptions={{
                 // Same colour by categoria either way. Precision is carried by
                 // the outline: solid ring for a confirmed zona, dashed ring and
@@ -244,11 +256,14 @@ export default function App() {
                 color: approximate
                   ? MARKER_COLOURS[record.categoria] || FALLBACK_COLOUR
                   : '#0a0a0a',
-                weight: 1.75,
-                dashArray: approximate ? '3 3' : undefined,
+                // The ring is 1 px now. At 1.75 it was half the radius, which
+                // read as a thick border rather than an outline and buried the
+                // fill colour that carries the category.
+                weight: 1,
+                dashArray: approximate ? '2 2' : undefined,
                 fillColor:
                   MARKER_COLOURS[record.categoria] || FALLBACK_COLOUR,
-                fillOpacity: approximate ? 0.45 : 0.95,
+                fillOpacity: approximate ? 0.35 : 0.9,
               }}
             >
               <RecordPopup record={record} onNotify={letter.ask} />

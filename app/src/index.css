@@ -143,17 +143,17 @@ body {
 }
 
 .swatch {
-  width: 0.6rem;
-  height: 0.6rem;
+  width: 0.55rem;
+  height: 0.55rem;
   border-radius: 50%;
-  border: 1.75px solid var(--ink);
-  box-shadow: 0 0 0 1px currentColor;
+  border: 1px solid var(--ink);
+  box-shadow: none;
 }
 
 /* Precision key: hollow, dashed ring, mirroring the fallback marker outline */
 .swatch.hollow {
   background: transparent;
-  border: 1.75px dashed var(--muted);
+  border: 1px dashed var(--muted);
   box-shadow: none;
 }
 
