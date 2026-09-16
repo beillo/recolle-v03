@@ -10,3 +10,7 @@ Thumbs.db
 
 # Raw scraped exports, contain personal data, never committed
 data/raw/
+
+# Vercel project link at the repository root. app/.vercel is already
+# covered by app/.gitignore; this one arrived when the CLI was run here.
+.vercel
