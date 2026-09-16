@@ -2036,5 +2036,962 @@
     "precision": "address",
     "query": "Rua Palomar 26, A Coruna, Spain",
     "match": "26, Rúa Palomar, A Coruña, Galicia"
+  },
+  {
+    "id": "107",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "C/ Luis de Camoens, esquina colegio Raquel Camacho",
+    "fecha": "2026-09-16",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1720654559474847/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "C/ Luis de Camiones esquina colegio Raquel Camacho.",
+    "imagen": [
+      "data/images/107.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "108",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle San Luis, enfrente del Andy",
+    "fecha": "2026-09-16",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1720625879477715/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "En la calle San Luis , enfrente del Andi. 3 colchones bien empaquetados",
+    "imagen": [
+      "data/images/108-1.jpg",
+      "data/images/108-2.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "109",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle Abad Conde, 8, zona Labanou",
+    "fecha": "2026-09-16",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1720610129479290/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle Abad Conde,8 Zona Labañou,está sucia,pero parece que bien",
+    "imagen": [
+      "data/images/109.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": "Labanou"
+  },
+  {
+    "id": "110",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Rua Buenavista 23, Os Castros",
+    "fecha": "2026-09-16",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1720584986148471/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Al lado del contenedor en Rua Buenavista 23, OS Castros.",
+    "imagen": [
+      "data/images/110.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": "Os Castros"
+  },
+  {
+    "id": "111",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "sin indicacion de lugar",
+    "fecha": "2026-09-16",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1720490456157924/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Patines de ruedas num 35-36",
+    "imagen": [
+      "data/images/111.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "112",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle Rafael Alberti 17",
+    "fecha": "2026-09-16",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1720411769499126/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Hoy a las nueve de la noche, calla Rafael Alberti número diecisiete",
+    "imagen": [
+      "data/images/112.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "113",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Plaza de Lugo, al lado de Zara Home",
+    "fecha": "2026-09-16",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1720340966172873/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Plaza de Lugo al lado de Zara home",
+    "imagen": [
+      "data/images/113-1.jpg",
+      "data/images/113-2.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "114",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle Rafael Alberti 23",
+    "fecha": "2026-09-15",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1720073576199612/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle Rafael Alberti número 23",
+    "imagen": [],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "115",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Sada, Parroco Villanueva",
+    "fecha": "2026-09-15",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1719974599542843/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Sada. Parroco Villanueva. Rayo sadense",
+    "imagen": [
+      "data/images/115.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "116",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Ramon del Cueto con Angel Rebollo",
+    "fecha": "2026-09-15",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1719947896212180/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "En un rato vamos a dejar una bolsa con los utensilios de cocina que se ven en la foto al lado de los contenedores de Ramon del Cueto con Angel Rebollo.",
+    "imagen": [
+      "data/images/116.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "117",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Plaza de Comercio 18, junto a los contenedores",
+    "fecha": "2026-09-15",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1719617492911887/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Plaza de comercio 18, en donde están los contenedores.",
+    "imagen": [
+      "data/images/117-1.jpg",
+      "data/images/117-2.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "118",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Recta de Guisamo (Bergondo), a la altura de la carniceria",
+    "fecha": "2026-09-15",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1719616086245361/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Ya no está.\nLa acabo de dejar.\n\nRecta de Guísamo (Bergondo) a la altura de la carnicería, enfrente a la Sociedad.\n\n  Bolsa de Pocoyó que contiene neceseres y bols@s",
+    "imagen": [
+      "data/images/118.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "119",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Illas Cies, enfrente del numero 15, Novo Mesoiro",
+    "fecha": "2026-09-15",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1719563806250589/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Trona de ikea en Ilas Cíes, enfrente del número 15 (zona novo mesoiro)",
+    "imagen": [
+      "data/images/119.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": "Novo Mesoiro"
+  },
+  {
+    "id": "120",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle Barrera con San Andres",
+    "fecha": "2026-09-14",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1719179999622303/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle Barrera y San Andrés.",
+    "imagen": [
+      "data/images/120-1.jpg",
+      "data/images/120-2.jpg",
+      "data/images/120-3.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "121",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Nuestra Senora de Fatima 33",
+    "fecha": "2026-09-14",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1719128872960749/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Nuestra señora de Fátima núm 33",
+    "imagen": [
+      "data/images/121.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "122",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Arquitecto Rey Pedreira 8",
+    "fecha": "2026-09-14",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1719045852969051/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Arquitecto Rey Pedreira n°8.",
+    "imagen": [
+      "data/images/122-1.jpg",
+      "data/images/122-2.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "123",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "C/ Almirante Mourelle 33",
+    "fecha": "2026-09-14",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1719031879637115/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "C/ Almirante Mourelle n° 33",
+    "imagen": [
+      "data/images/123.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "124",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "C/ Almirante Mourelle 78, entrando por Ronda de Outeiro",
+    "fecha": "2026-09-14",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1719029079637395/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "C/ Almirante Mourelle n° 78. Entrando por Ronda d Outeiro.",
+    "imagen": [
+      "data/images/124.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "125",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Al lado de los contenedores frente al 38 de la calle Entrepenas",
+    "fecha": "2026-09-14",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1718910216315948/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Madera de verdad. Al lado de los contenedores frente al número 38 de la calle Entrepeñas.",
+    "imagen": [
+      "data/images/125.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "126",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Pascual Veiga 43",
+    "fecha": "2026-09-14",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1718680003005636/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Pascual Veiga 43",
+    "imagen": [
+      "data/images/126.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "127",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Monasterio de Moraime",
+    "fecha": "2026-09-13",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1718308616376108/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "En Monasterio de Moraime. Muy cuca",
+    "imagen": [
+      "data/images/127.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "128",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Ronda de Nelle 9, sentido San Pedro de Mezonzo",
+    "fecha": "2026-09-13",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1718088186398151/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Rda de Nelle, 9 (sentido hacia San Pedro de Mezonzo/Cuatro Caminos)",
+    "imagen": [
+      "data/images/128.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "129",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Agra de Bragua 1",
+    "fecha": "2026-09-13",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1717904516416518/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Baraja Española\nAgra de bragua 1",
+    "imagen": [
+      "data/images/129.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "130",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Ronda de Outeiro 14",
+    "fecha": "2026-09-13",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1717877583085878/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Ronda de outeiro, 14",
+    "imagen": [
+      "data/images/130-1.jpg",
+      "data/images/130-2.jpg",
+      "data/images/130-3.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "131",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Guisamo, Bergondo",
+    "fecha": "2026-09-13",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1717857329754570/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Ya no está.\nDesconozco el estado, a simple vista parece que está bien\n\nGuísamo - Bergondo",
+    "imagen": [
+      "data/images/131.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "132",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Lugar de Pedralonga",
+    "fecha": "2026-09-13",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1717776383095998/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Visto en lugar Pedralonga ahora mismo",
+    "imagen": [
+      "data/images/132.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "133",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Orzan con Rua Vista",
+    "fecha": "2026-09-12",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1717413446465625/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Orzán con Rúa Vista 👀",
+    "imagen": [
+      "data/images/133.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "134",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Zona Lonzas, junto al cuartel",
+    "fecha": "2026-09-12",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1717394076467562/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "📍Zona Lonzas [policía local/cuartel]",
+    "imagen": [
+      "data/images/134.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": "Lonzas"
+  },
+  {
+    "id": "135",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "sin indicacion de lugar",
+    "fecha": "2026-09-12",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1717289093144727/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Ahora mismo los triciclos una limpieza , la mochila 0",
+    "imagen": [
+      "data/images/135.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "136",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Rua Fita",
+    "fecha": "2026-09-12",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1717062023167434/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Rúa Fita.\nA cadeliña non. Soamente as flores secas.",
+    "imagen": [
+      "data/images/136-1.jpg",
+      "data/images/136-2.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "137",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle Observatorio con Gil Vicente",
+    "fecha": "2026-09-12",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1716975043176132/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle Observatorio con Gil Vicente",
+    "imagen": [
+      "data/images/137-1.jpg",
+      "data/images/137-2.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "138",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle Pascual Veiga, entre los portales 51 y 53",
+    "fecha": "2026-09-12",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1716968486510121/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle Pascual Veiga entre los portales 51 y 53",
+    "imagen": [
+      "data/images/138-1.jpg",
+      "data/images/138-2.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "139",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle Observatorio 9",
+    "fecha": "2026-09-12",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1716964899843813/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle Observatorio 9",
+    "imagen": [
+      "data/images/139.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "140",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Socorro 10",
+    "fecha": "2026-09-11",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1716615116545458/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Cadeiras clásicas de formica en Socorro, 10",
+    "imagen": [
+      "data/images/140-1.jpg",
+      "data/images/140-2.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "141",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Rua do Socorro 10",
+    "fecha": "2026-09-11",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1716612686545701/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Sillas vintage en buen estado\nSon muy chulas!!\n\nRua do Socorro 10",
+    "imagen": [
+      "data/images/141.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "142",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle Tornos 9",
+    "fecha": "2026-09-11",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1716591326547837/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle Tornos n. 9",
+    "imagen": [
+      "data/images/142.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "143",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Cuesta de la Union 16",
+    "fecha": "2026-09-11",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1716454213228215/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Cuesta de la Unión 16",
+    "imagen": [
+      "data/images/143.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "144",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Praza de Fuente Luisa",
+    "fecha": "2026-09-11",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1716453379894965/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Praza de Fuente Luisa",
+    "imagen": [
+      "data/images/144-1.jpg",
+      "data/images/144-2.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "145",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Rio de Quintas, en las casas de Santa Barbara",
+    "fecha": "2026-09-11",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1716347083238928/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Río de Quintas, en las casas de Santa Bárbara",
+    "imagen": [
+      "data/images/145-1.jpg",
+      "data/images/145-2.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "146",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "C/ Almirante Mourelle 33",
+    "fecha": "2026-09-11",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1716300949910208/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "C/ almirante Mourelle n° 33.",
+    "imagen": [
+      "data/images/146.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "147",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Ronda de Outeiro 274",
+    "fecha": "2026-09-11",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1716183453255291/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Buenos días. Ronda d Outeiro n° 274.",
+    "imagen": [
+      "data/images/147-1.jpg",
+      "data/images/147-2.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "148",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Recta de Guisamo, frente a la Sociedad",
+    "fecha": "2026-09-11",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1716173353256301/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Ya no está \nCuna colecho Nenuco y disfraz de brujita.\n\nEn la recta de Guísamo, frente a la Sociedad. \n\nLo acabo de dejar.",
+    "imagen": [
+      "data/images/148-1.jpg",
+      "data/images/148-2.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "149",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Francisco Anon",
+    "fecha": "2026-09-10",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1715789646628005/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Francisco Añón. Vese impecable, de 135cm",
+    "imagen": [
+      "data/images/149.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "150",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Paseo de Ronda 28, entre los contenedores soterrados",
+    "fecha": "2026-09-10",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1715781283295508/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Dúas caixas de tela, tipo clasificador.\nUn escáner marca Epson, ten cable de enerxía ben enrolado. \nEn Paseo de Ronda, 28, entre os contedores soterrados.",
+    "imagen": [
+      "data/images/150-1.jpg",
+      "data/images/150-2.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "151",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle San Francisco, Ciudad Vieja",
+    "fecha": "2026-09-10",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1715778916629078/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Cuna\nAcaban de dejar ahora mismo esta cuna en calle San Francisco, ciudad vieja, parece completa y en buen estado",
+    "imagen": [
+      "data/images/151.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": "Ciudad Vieja"
+  },
+  {
+    "id": "152",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Delante de la libreria Arenas",
+    "fecha": "2026-09-10",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1715596699980633/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Burro diante da libreria arenas",
+    "imagen": [
+      "data/images/152.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "153",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Sada, Avenida del Puerto, altura pension O Ortexo",
+    "fecha": "2026-09-10",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1715373286669641/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "En Sada , en la Avenida del Puerto altura pensión O' Ortexo.\nLe falta una pieza pero puede valer pa lo mismo o para darle otro uso.",
+    "imagen": [
+      "data/images/153-1.jpg",
+      "data/images/153-2.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "154",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Ronda de Outeiro 281",
+    "fecha": "2026-09-10",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1715367536670216/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Cuna, está bastante bien\nRonda de outeiro 281",
+    "imagen": [
+      "data/images/154-1.jpg",
+      "data/images/154-2.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "155",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Calle Jose Amor Lopez con Cancelina",
+    "fecha": "2026-09-10",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1715302223343414/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Calle Jose Amor Lopez con Canceliña",
+    "imagen": [
+      "data/images/155.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "156",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Rua Panama, entre los numeros 7 y 9",
+    "fecha": "2026-09-09",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714892796717690/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Entre los n° 7/9",
+    "imagen": [
+      "data/images/156-1.jpg",
+      "data/images/156-2.jpg"
+    ],
+    "confidence": 0.9,
+    "zona": null
+  },
+  {
+    "id": "157",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Rua Vila de Cee",
+    "fecha": "2026-09-09",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714879796718990/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Rua Vila de Cee",
+    "imagen": [
+      "data/images/157-1.jpg",
+      "data/images/157-2.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
+  },
+  {
+    "id": "158",
+    "categoria": "circular_item",
+    "severidad": null,
+    "localizacion": "Atocha Baja",
+    "fecha": "2026-09-09",
+    "fuente": {
+      "tipo": "facebook_group",
+      "url": "https://www.facebook.com/groups/270958641111120/permalink/1714846266722343/",
+      "grupo": "Lixo de luxo Coruña"
+    },
+    "descripcion": "Atocha baja",
+    "imagen": [
+      "data/images/158-1.jpg",
+      "data/images/158-2.jpg",
+      "data/images/158-3.jpg"
+    ],
+    "confidence": 0.6,
+    "zona": null
   }
 ]
